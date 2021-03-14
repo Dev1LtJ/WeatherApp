@@ -1,0 +1,19 @@
+.card-header {
+    color: $white-color;
+    &_black {
+        color: $black-color;
+    }
+    &__primary{
+        margin: 0;
+        line-height: 26px;
+        font-size: 26px;
+        font-weight: 400;
+    }
+    &__secondary {
+        margin-top: 10px;
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: 300;
+        color: rgba($white-color, 0.5);
+    }
+}

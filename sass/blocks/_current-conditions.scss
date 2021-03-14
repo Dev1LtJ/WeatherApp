@@ -1,0 +1,77 @@
+.current-conditions {
+    font-size: 18px;
+    line-height: 18px;
+    padding-bottom: 10px;
+    font-weight: 300;
+    margin-top: 12px;
+    color: $black-color;
+    background-color: $white-color;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba($black-color, 0.2);
+    &__wrapper {
+        padding: 20px 30px 20px 30px;
+    }
+    &__details {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__details-item {
+        width: 49%;
+        margin-right: 6px;
+        border-top: 1px solid $grey-color;
+        padding: 10px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img {
+            width: 20px;
+            margin-right: 10px;
+        }
+    }
+    &__details-wrapper {
+        display: flex;
+        align-items: center;
+    }
+    &__sun {
+        width: 200px;
+    }
+    &__sun-data {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__sunrise, &__sunset {
+        display: flex;
+        align-items: center;
+    }
+    &__sunset {
+        margin-left: 10px;
+    }
+    &__sunrise-text, &__sunset-text {
+        margin-left: 5px;
+    }
+    &__graph {
+        margin: 0 auto;
+        width: 100px;
+        position: relative;
+    }
+    &__graph-primary {
+        overflow: hidden;
+        width: 100px;
+        height: 65px;
+        path {
+            stroke: #e87538;
+            fill: none;
+            stroke-width: 3px;
+            stroke-linecap: round;
+            transform: rotate(180deg);
+        }
+    }
+    &__graph-secondary {
+        bottom: 0px;
+        left: 0px;
+        overflow: hidden;
+        position: absolute;
+        height: 24px;
+        width: 24px;
+    }
+}

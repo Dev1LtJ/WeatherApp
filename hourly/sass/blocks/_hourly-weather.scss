@@ -1,0 +1,130 @@
+.hourly-weather {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 300;
+    margin-top: 12px;
+    color: $black-color;
+    background-color: $white-color;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba($black-color, 0.2);
+    padding: 20px 30px;
+    &__title {
+        margin-bottom: 20px;
+    }
+    &__day {
+        margin-top: 30px;
+        padding: 20px 0;
+        border-bottom: 1px solid $grey-color;
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+    &__item {
+        position: relative;
+        padding: 10px 0;
+        border-bottom: 1px solid $grey-color;
+    }
+    &__item-primary,
+    &__item-secondary {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__item-primary {
+        cursor: pointer;
+    }
+    &__item-temp {
+        color: $blue-color;
+        font-size: 25px;
+        line-height: 25px;
+        font-weight: 400;
+    }
+
+    &__item-pop,
+    &__item-wind,
+    &__item-conditions {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        img {
+            margin-right: 10px;
+        }
+    }
+
+    &__item-conditions {
+        width: 40%;
+    }
+    &__item-wind {
+        width: 20%;
+    }
+    &__item-temp,
+    &__item-time,
+    &__item-pop {
+        width: 10%;
+    }
+
+    &__item-conditions-img {
+        width: 40px;
+    }
+    &__item-more {
+        width: 15px;
+        &.active {
+            transform: rotate(180deg);
+        }
+    }
+    &__item-feels,
+    &__item-pressure,
+    &__item-humidity,
+    &__item-dewPoint,
+    &__item-cloudiness,
+    &__item-uv {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        img {
+            margin-right: 10px;
+            width: 24px;
+        }
+    }
+    &__item-feels-descr,
+    &__item-pressure-descr,
+    &__item-humidity-descr,
+    &__item-dewPoint-descr,
+    &__item-cloudiness-descr,
+    &__item-uv-descr {
+        margin-top: 10px;
+        font-weight: 400;
+    }
+    &__item-secondary {
+        margin-top: 20px;
+        border: 1px solid $grey-color;
+        border-radius: 10px;
+        padding: 10px 15px;
+        display: none;
+        opacity: 0;
+        transition: 0.5s all;
+        &.active {
+            display: flex;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    &__button {
+        display: inline-block;
+        margin-top: 20px;
+        color: $white-color;
+        background-color: $blue-color;
+        border: 1px solid $blue-color;
+        border-radius: 12px;
+        font-size: 16px;
+        line-height: 16px;
+        font-weight: 300;
+        padding: 8px 20px;
+        cursor: pointer;
+        &:hover {
+            color: $white-color;
+            box-shadow: 0 0 5px 0 $blue-color;
+            text-decoration: none;
+        }
+    }
+}

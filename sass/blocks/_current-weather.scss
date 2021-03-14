@@ -1,0 +1,48 @@
+.current-weather {
+    color: $white-color;
+    box-shadow: 0 0 10px 0 rgba($black-color, 0.2);
+    background-image: linear-gradient($main-color, #5a89a2);
+    border-radius: 10px;
+    &__wrapper {
+        padding: 20px 30px 20px 30px;
+    }
+    &__data {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__primary {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+    &__primary-wrapper {
+        display: flex;
+        align-items: flex-end;
+    }
+    &__temp-value {
+        font-size: 90px;
+        line-height: 90px;
+        font-weight: 400;
+    }
+    &__temp-phrase {
+        margin-top: 10px;
+        font-size: 26px;
+        line-height: 26px;
+        font-weight: 400;
+    }
+    &__secondary {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        text-align: right;
+    }
+    &__temp-img {
+        width: 180px;
+        height: 180px;
+    }
+    &__feels {
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: 300;
+    }
+}

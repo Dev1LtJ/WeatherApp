@@ -1,0 +1,28 @@
+.dark {
+    .hourly-weather {
+        color: $white-color;
+        background-color: $main-dark-color;
+        box-shadow: 0 0 10px 0 rgba($main-dark-color, 0.2);
+        &__day {
+            border-bottom: 1px solid $darkgrey-color;
+        }
+        &__item {
+            border-bottom: 1px solid $darkgrey-color;
+        }
+        &__item-temp {
+            color: $main-color;
+        }
+        &__item-secondary {
+            border: 1px solid $darkgrey-color;
+        }
+        &__button {
+            color: $white-color;
+            background-color: $main-color;
+            border: 1px solid $main-color;
+            &:hover {
+                color: $white-color;
+                box-shadow: 0 0 5px 0 $main-color;
+            }
+        }
+    }
+}

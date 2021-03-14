@@ -1,0 +1,43 @@
+@import "libs/bootstrap-reboot.min";
+// @import "libs/font";
+
+@import "base/variables";
+
+* {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.container {
+    position: relative;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+@import 'blocks/buttons';
+@import 'blocks/header';
+@import 'blocks/menu';
+@import 'blocks/screen';
+@import 'blocks/primary';
+@import 'blocks/card-header';
+@import 'blocks/current-weather';
+@import 'blocks/secondary';
+@import 'blocks/air-quality';
+@import 'blocks/today-weather';
+@import 'blocks/current-conditions';
+@import 'blocks/hourly-weather';
+@import 'blocks/daily-weather';
+@import 'blocks/nav';
+@import 'blocks/footer';
+
+@import 'dark-theme/screen-dark';
+@import 'dark-theme/header-dark';
+@import 'dark-theme/menu-dark';
+@import 'dark-theme/current-weather-dark';
+@import 'dark-theme/daily-weather-dark';
+@import 'dark-theme/card-header-dark';
+@import 'dark-theme/hourly-weather-dark';
+@import 'dark-theme/today-weather-dark';
+@import 'dark-theme/current-conditions-dark';
+@import 'dark-theme/buttons-dark';
+@import 'dark-theme/nav-dark';
+@import 'dark-theme/footer-dark';

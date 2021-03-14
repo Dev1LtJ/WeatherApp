@@ -1,0 +1,55 @@
+.hourly-weather {
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 300;
+    margin-top: 12px;
+    color: $black-color;
+    background-color: $white-color;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba($black-color, 0.2);
+    padding-bottom: 20px;
+    &__wrapper {
+        padding: 20px 30px 20px 30px;
+    }
+    &__details {
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__details-item {
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        border-right: 1px solid;
+        border-image: linear-gradient(180deg, $white-color, $grey-color, $white-color) 1;
+        &:last-of-type {
+            border: none;
+        }
+    }
+    &__details-temp {
+        margin-top: 10px;
+        font-size: 40px;
+        line-height: 40px;
+        color: $blue-color;
+    }
+    &__details-img {
+        margin: 0 auto;
+        width: 50px;
+    }
+    &__details-pop {
+        margin-top: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            height: 18px;
+        }
+    }
+    &__details-popValue {
+        margin-left: 5px;
+    }
+    &__more {
+        margin-left: 30px;
+    }
+}

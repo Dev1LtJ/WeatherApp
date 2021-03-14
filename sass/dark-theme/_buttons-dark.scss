@@ -1,0 +1,13 @@
+.dark {
+    .button {
+        &_more {
+            color: $white-color;
+            background-color: $main-color;
+            border: 1px solid $main-color;
+            &:hover {
+                color: $white-color;
+                box-shadow: 0 0 5px 0 $main-color;
+            }
+        }
+    }
+}

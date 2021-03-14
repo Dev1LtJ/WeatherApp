@@ -1,0 +1,32 @@
+@import "libs/bootstrap-reboot.min";
+// @import "libs/font";
+
+@import "base/variables";
+
+* {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.container {
+    position: relative;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+@import 'blocks/header';
+@import 'blocks/menu';
+@import 'blocks/nav';
+@import 'blocks/screen';
+@import 'blocks/hourly-weather';
+@import 'blocks/footer';
+@import 'blocks/card-header';
+@import 'blocks/pageup';
+
+@import 'dark-theme/screen-dark';
+@import 'dark-theme/nav-dark';
+@import 'dark-theme/menu-dark';
+@import 'dark-theme/card-header-dark';
+@import 'dark-theme/footer-dark';
+@import 'dark-theme/header-dark';
+@import 'dark-theme/hourly-weather-dark';
+@import 'dark-theme/pageup-dark';

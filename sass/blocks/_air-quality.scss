@@ -1,0 +1,21 @@
+.air-quality {
+    background-color: $white-color;
+    color: $black-color;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba($black-color, 0.2);
+    &__wrapper {
+        padding: 20px;
+    }
+    &__data {
+        display: flex;
+        align-items: flex-start;
+    }
+    &__phrase-title {
+        font-weight: 400;
+    }
+    &__phrase-descr {
+        color: $grey2-color;
+        font-weight: 300;
+        font-size: 14px;
+    }
+}

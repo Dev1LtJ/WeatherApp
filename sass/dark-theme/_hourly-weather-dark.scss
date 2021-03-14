@@ -1,0 +1,16 @@
+.dark {
+    .hourly-weather {
+        color: $white-color;
+        background-color: $main-dark-color;
+        box-shadow: 0 0 10px 0 rgba($main-dark-color, 0.2);
+        &__details-item {
+            border-image: linear-gradient(180deg, $main-dark-color, $grey-color, $main-dark-color) 1;
+        }
+        &__details-temp {
+            margin-top: 10px;
+            font-size: 40px;
+            line-height: 40px;
+            color: $main-color;
+        }
+    }
+}
