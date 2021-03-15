@@ -64,6 +64,7 @@ function setCurrentConditions (responseData) {
     dewPoint.textContent = `${responseData.current.dew_point}°`;
     uvIndex.textContent = `${Math.round(responseData.current.uvi)} ${langObj[settings.lang].from} 10`;
     moonPhase.textContent = `${langObj[settings.lang].moon[moon.get()]}`;
+    console.log(moon.get());
     minMax.textContent = `${Math.round(responseData.daily[0].temp.max)}°/${Math.round(responseData.daily[0].temp.min)}°`;
     sunrise.textContent = `${new Intl.DateTimeFormat(settings.lang, {hour: '2-digit', minute: '2-digit'}).format(new Date(responseData.daily[0].sunrise*1000))}`;
     sunset.textContent = `${new Intl.DateTimeFormat(settings.lang, {hour: '2-digit', minute: '2-digit'}).format(new Date(responseData.daily[0].sunset*1000))}`;

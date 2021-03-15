@@ -2,6 +2,7 @@
     font-size: 18px;
     line-height: 20px;
     font-weight: 300;
+    margin-top: 12px;
     color: $black-color;
     background-color: $white-color;
     border-radius: 10px;
@@ -33,6 +34,9 @@
         cursor: pointer;
     }
     &__item-temp {
+        display: flex;
+    }
+    &__item-temp-day {
         color: $blue-color;
         font-size: 25px;
         line-height: 25px;

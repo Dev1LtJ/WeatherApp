@@ -20,7 +20,7 @@ export const langObj = {
         moon: {
             title: 'Фаза луны',
             newmoon: 'Новая луна',
-            waxingCrescent: 'Растущий серп',
+            waxingcrescent: 'Растущий серп',
             firstquarter: 'Первая четверть',
             waxinggibbous: 'Растущая луна',
             fullmoon: 'Полная луна',

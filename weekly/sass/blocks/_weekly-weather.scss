@@ -1,0 +1,197 @@
+.weekly-weather {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 300;
+    margin-top: 12px;
+    color: $black-color;
+    background-color: $white-color;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba($black-color, 0.2);
+    padding: 20px 30px;
+    &__title {
+        margin-bottom: 20px;
+    }
+    &__item {
+        position: relative;
+        padding: 10px 0;
+        border-bottom: 1px solid $grey-color;
+    }
+    &__primary,
+    &__secondary {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__primary {
+        cursor: pointer;
+    }
+    &__temp {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__temp-day {
+        color: $blue-color;
+        font-size: 25px;
+        line-height: 25px;
+        font-weight: 400;
+    }
+    &__pop,
+    &__wind,
+    &__conditions {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        img {
+            margin-right: 10px;
+        }
+    }
+    &__conditions {
+        width: 40%;
+        img {
+            width: 40px;
+        }
+    }
+    &__wind {
+        width: 20%;
+    }
+    &__temp,
+    &__day,
+    &__pop {
+        width: 10%;
+    }
+    &__more {
+        width: 15px;
+        &.active {
+            transform: rotate(180deg);
+        }
+    }
+    &__secondary {
+        margin-top: 20px;
+        border: 1px solid $grey-color;
+        border-radius: 10px;
+        padding: 10px 15px;
+        display: none;
+        opacity: 0;
+        transition: 0.5s all;
+        &.active {
+            display: flex;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    &__allTemp {
+        margin-top: 20px;
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+    }
+    &__allTemp-item {
+        width: 25%;
+        border-right: 1px solid;
+        border-image: linear-gradient(180deg, $white-color, $grey-color, $white-color) 1;
+        &:last-of-type {
+            border: none;
+        }
+    }
+    &__allTemp-value {
+        margin-top: 10px;
+        font-size: 25px;
+        line-height: 25px;
+        color: $blue-color;
+    }
+    &__allTemp-feelsLike {
+        margin-top: 10px;
+    }
+    &__column {
+        width: 29%;
+        &_wrap {
+            width: 70%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    &__sun {
+        width: 200px;
+        margin: 0 auto;
+    }
+    &__sun-data {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__sunrise, &__sunset {
+        display: flex;
+        align-items: center;
+    }
+    &__sunset {
+        margin-left: 10px;
+    }
+    &__sunrise-text, &__sunset-text {
+        margin-left: 5px;
+    }
+    &__sun-graph {
+        margin: 0 auto;
+        width: 100px;
+        position: relative;
+    }
+    &__sun-graph-primary {
+        overflow: hidden;
+        width: 100px;
+        height: 65px;
+        path {
+            stroke: #e87538;
+            fill: none;
+            stroke-width: 3px;
+            stroke-linecap: round;
+            transform: rotate(180deg);
+        }
+    }
+    &__sun-graph-secondary {
+        bottom: 0px;
+        left: 0px;
+        overflow: hidden;
+        position: absolute;
+        height: 24px;
+        width: 24px;
+    }
+    &__details {
+        width: 49%;
+        border-bottom: 1px solid $grey-color;
+        padding: 10px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img {
+            width: 24px;
+            margin-right: 10px;
+        }
+        &:last-of-type {
+            border-bottom: none;
+        }
+    }
+    &__details-value {
+        font-weight: 400;
+    }
+    &__details-wrapper {
+        display: flex;
+        align-items: center;
+    }
+    &__button {
+        display: inline-block;
+        margin-top: 20px;
+        color: $white-color;
+        background-color: $blue-color;
+        border: 1px solid $blue-color;
+        border-radius: 12px;
+        font-size: 16px;
+        line-height: 16px;
+        font-weight: 300;
+        padding: 8px 20px;
+        cursor: pointer;
+        &:hover {
+            color: $white-color;
+            box-shadow: 0 0 5px 0 $blue-color;
+            text-decoration: none;
+        }
+    }
+}

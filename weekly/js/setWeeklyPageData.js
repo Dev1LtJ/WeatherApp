@@ -3,36 +3,29 @@ import {langObj} from '../../js/langObj.js';
 import {unitsObj} from '../../js/unitsObj.js';
 import {settings} from './settings.js';
 import {setCity} from './setCity.js';
-import {createItem} from './createItem.js';
+//import {createItem} from './createItem.js';
 
 let titleCity = document.querySelector('.card-header__primary'),
     titleTime = document.querySelector('.card-header__secondary'),
-    weatherData = document.querySelector('.hourly-weather__data'),
-    days = document.querySelectorAll('.hourly-weather__day');
+    weatherData = document.querySelector('.weekly-weather__data');
 
-export async function setHourlyPageData() {
+export async function setWeeklyPageData() {
     setCity(titleCity);
     let requestURL = `https://api.openweathermap.org/data/2.5/onecall?lat=53.90249633789063&lon=27.56148147583008&appid=400da6eb26c3c55fb657e09c050e94bd&units=${settings.units}&lang=${settings.lang}&exclude=minutely,alerts,daily`;
     let response = await fetch(requestURL);
     if (response.ok) {
         let responseData = await response.json();
-        clearPreviousData ();
-        setResponseTime(responseData);
-        setData(responseData);
+        //clearPreviousData ();
+        //setResponseTime(responseData);
+        //setData(responseData);
     } else {
         console.log('Ошибка HTTP: ' + response.status);
     }
 }
 
 function setData (responseData) {
-    let dateCash = null;
     responseData.hourly.forEach((hourData)=> {
         let item = createItem();
-        let date = new Date(hourData.dt*1000);
-        if (date.getDate() != dateCash) {
-            dateCash = date.getDate();
-            weatherData.append(createDay(date));
-        }
         item.firstElementChild.children[0].textContent = `${new Intl.DateTimeFormat(settings.lang, {hour: '2-digit', minute: '2-digit'}).format(new Date(hourData.dt*1000))}`
         item.firstElementChild.children[1].textContent = `${Math.round(hourData.temp)}°`;
         item.firstElementChild.children[2].firstElementChild.setAttribute('src', `icons/openweathermap/${hourData.weather[0].icon}.svg`);
@@ -59,11 +52,4 @@ function clearPreviousData () {
     while (weatherData.firstChild) {
         weatherData.firstChild.remove();
     }
-}
-
-function createDay (date) {
-    let dateElem = document.createElement('DIV');
-    dateElem.className = 'hourly-weather__day';
-    dateElem.textContent = `${new Intl.DateTimeFormat(settings.lang, {weekday: 'long', day: '2-digit', month: 'long'}).format(date)}`;
-    return dateElem;
 }
