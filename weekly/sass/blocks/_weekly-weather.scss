@@ -2,7 +2,6 @@
     font-size: 18px;
     line-height: 20px;
     font-weight: 300;
-    margin-top: 12px;
     color: $black-color;
     background-color: $white-color;
     border-radius: 10px;
@@ -100,15 +99,13 @@
         line-height: 25px;
         color: $blue-color;
     }
-    &__allTemp-feelsLike {
-        margin-top: 10px;
-    }
     &__column {
         width: 29%;
         &_wrap {
             width: 70%;
             display: flex;
             flex-wrap: wrap;
+            justify-content: space-between;
         }
     }
     &__sun {
@@ -138,13 +135,6 @@
         overflow: hidden;
         width: 100px;
         height: 65px;
-        path {
-            stroke: #e87538;
-            fill: none;
-            stroke-width: 3px;
-            stroke-linecap: round;
-            transform: rotate(180deg);
-        }
     }
     &__sun-graph-secondary {
         bottom: 0px;

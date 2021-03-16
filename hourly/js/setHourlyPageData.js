@@ -3,12 +3,11 @@ import {langObj} from '../../js/langObj.js';
 import {unitsObj} from '../../js/unitsObj.js';
 import {settings} from './settings.js';
 import {setCity} from './setCity.js';
-import {createItem} from './createItem.js';
+import {createItem, createDay} from './createItem.js';
 
 let titleCity = document.querySelector('.card-header__primary'),
     titleTime = document.querySelector('.card-header__secondary'),
-    weatherData = document.querySelector('.hourly-weather__data'),
-    days = document.querySelectorAll('.hourly-weather__day');
+    weatherData = document.querySelector('.hourly-weather__data');
 
 export async function setHourlyPageData() {
     setCity(titleCity);
@@ -33,20 +32,19 @@ function setData (responseData) {
             dateCash = date.getDate();
             weatherData.append(createDay(date));
         }
-        item.firstElementChild.children[0].textContent = `${new Intl.DateTimeFormat(settings.lang, {hour: '2-digit', minute: '2-digit'}).format(new Date(hourData.dt*1000))}`
-        item.firstElementChild.children[1].textContent = `${Math.round(hourData.temp)}°`;
-        item.firstElementChild.children[2].firstElementChild.setAttribute('src', `icons/openweathermap/${hourData.weather[0].icon}.svg`);
-        item.firstElementChild.children[2].lastElementChild.textContent = `${hourData.weather[0].description[0].toUpperCase() + hourData.weather[0].description.slice(1)}`;
-        item.firstElementChild.children[3].lastElementChild.textContent = `${Math.round(hourData.pop*100)} %`;
-        item.firstElementChild.children[4].children[1].style.transform = `rotate(${hourData.wind_deg}deg)`;
-        item.firstElementChild.children[4].children[2].textContent = `${hourData.wind_speed} ${unitsObj[settings.units][settings.lang].speed}`;
-
-        item.lastElementChild.children[0].lastElementChild.lastElementChild.textContent = `${Math.round(hourData.feels_like)}°`;
-        item.lastElementChild.children[1].lastElementChild.lastElementChild.textContent = `${Math.round(hourData.pressure/1.333)} ${langObj[settings.lang].mmHg}`;
-        item.lastElementChild.children[2].lastElementChild.lastElementChild.textContent = `${hourData.humidity} %`;
-        item.lastElementChild.children[3].lastElementChild.lastElementChild.textContent = `${hourData.clouds} %`;
-        item.lastElementChild.children[4].lastElementChild.lastElementChild.textContent = `${hourData.dew_point}°`;
-        item.lastElementChild.children[5].lastElementChild.lastElementChild.textContent = `${Math.round(hourData.uvi)} ${langObj[settings.lang].from} 10`;
+        item.querySelector('.hourly-weather__item-time').textContent = `${new Intl.DateTimeFormat(settings.lang, {hour: '2-digit', minute: '2-digit'}).format(new Date(hourData.dt*1000))}`
+        item.querySelector('.hourly-weather__item-temp').textContent = `${Math.round(hourData.temp)}°`;
+        item.querySelector('.hourly-weather__item-conditions-img').setAttribute('src', `icons/openweathermap/${hourData.weather[0].icon}.svg`);
+        item.querySelector('.hourly-weather__item-conditions-descr').textContent = `${hourData.weather[0].description[0].toUpperCase() + hourData.weather[0].description.slice(1)}`;
+        item.querySelector('.hourly-weather__item-pop-descr').textContent = `${Math.round(hourData.pop*100)} %`;
+        item.querySelector('.hourly-weather__item-wind-arrow-img').style.transform = `rotate(${hourData.wind_deg}deg)`;
+        item.querySelector('.hourly-weather__item-wind-descr').textContent = `${hourData.wind_speed} ${unitsObj[settings.units][settings.lang].speed}`;
+        item.querySelector('.hourly-weather__item-feels-descr').textContent = `${Math.round(hourData.feels_like)}°`;
+        item.querySelector('.hourly-weather__item-pressure-descr').textContent = `${Math.round(hourData.pressure/1.333)} ${langObj[settings.lang].mmHg}`;
+        item.querySelector('.hourly-weather__item-humidity-descr').textContent = `${hourData.humidity} %`;
+        item.querySelector('.hourly-weather__item-cloudiness-descr').textContent = `${hourData.clouds} %`;
+        item.querySelector('.hourly-weather__item-dewPoint-descr').textContent = `${hourData.dew_point}°`;
+        item.querySelector('.hourly-weather__item-uv-descr').textContent = `${Math.round(hourData.uvi)} ${langObj[settings.lang].from} 10`;
         weatherData.append(item);
     });
 }
@@ -59,11 +57,4 @@ function clearPreviousData () {
     while (weatherData.firstChild) {
         weatherData.firstChild.remove();
     }
-}
-
-function createDay (date) {
-    let dateElem = document.createElement('DIV');
-    dateElem.className = 'hourly-weather__day';
-    dateElem.textContent = `${new Intl.DateTimeFormat(settings.lang, {weekday: 'long', day: '2-digit', month: 'long'}).format(date)}`;
-    return dateElem;
 }

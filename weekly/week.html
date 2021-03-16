@@ -11,36 +11,36 @@
     <meta name="description" content="Daily Weather Forecast and more">
 
     <!-- Open Graph / Facebook -->
-    <!-- <meta property="og:type" content="website">
-    <meta property="og:url" content="../https://dev1ltj.github.io/WeatherApp/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dev1ltj.github.io/WeatherApp/">
     <meta property="og:title" content="The Weather Forecast">
     <meta property="og:description" content="Daily Weather Forecast and more">
-    <meta property="og:image" content="../img/meta.png"> -->
+    <meta property="og:image" content="img/meta.png">
 
     <!-- Twitter -->
-    <!-- <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://dev1ltj.github.io/WeatherApp/">
     <meta property="twitter:title" content="The Weather Forecast">
     <meta property="twitter:description" content="Daily Weather Forecast and more">
-    <meta property="twitter:image" content="../img/meta.png">
+    <meta property="twitter:image" content="img/meta.png">
 
-    <link rel="apple-touch-icon" sizes="57x57" href="../icons/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="../icons/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="../icons/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="../icons/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="../icons/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="../icons/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="../icons/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="../icons/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="../icons/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="../icons/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="../icons/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../icons/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="icons/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icons/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icons/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icons/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="icons/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon/favicon-16x16.png">
     <link rel="manifest" href="icons/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="../icons/favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff"> -->
+    <meta name="msapplication-TileImage" content="icons/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
@@ -111,10 +111,7 @@
                 <a class="nav__week" target="_self" href="#">На 7 дней</a>
             </li>
             <li class="nav__item">
-                <a class="nav__twoWeeks" href="#">На 14 дней</a>
-            </li>
-            <li class="nav__item">
-                <a class="nav__month" href="#">На месяц</a>
+                <a class="nav__air-quality" href="#">Индекс качества воздуха</a>
             </li>
             <li class="nav__item">
                 <a class="nav__maps" href="#">Карты</a>
@@ -137,20 +134,20 @@
                         <div class="weekly-weather__day">Вт, 16</div>
                         <div class="weekly-weather__temp">
                             <div class="weekly-weather__temp-day">5*</div>
-                            <div>/-2*</div>
+                            <div class="weekly-weather__temp-night">/-2*</div>
                         </div>
                         <div class="weekly-weather__conditions">
-                            <img src="icons/openweathermap/01d.svg" alt="img">
-                            <div>Переменная облачность</div>
+                            <img class="weekly-weather__conditions-img" src="icons/openweathermap/01d.svg" alt="img">
+                            <div class="weekly-weather__conditions-descr">Переменная облачность</div>
                         </div>
                         <div class="weekly-weather__pop">
                             <img src="icons/hourly/umbrella.svg" alt="pop-img">
-                            <div>0 %</div>
+                            <div class="weekly-weather__pop-descr">0 %</div>
                         </div>
                         <div class="weekly-weather__wind">
                             <img src="icons/currentconditions/wind.svg" alt="wind-img">
-                            <img src="icons/currentconditions/wind-arrow.svg" alt="wind-arrow-img">
-                            <div>4.23 м/c</div>
+                            <img class="weekly-weather__wind-arrow" src="icons/currentconditions/wind-arrow.svg" alt="wind-arrow-img">
+                            <div class="weekly-weather__wind-descr">4.23 м/c</div>
                         </div>
                         <img class="weekly-weather__more" src="icons/hourly/more.svg" alt="more-img">
                     </div>
@@ -158,9 +155,8 @@
                         <div class="weekly-weather__column">
                             <div class="weekly-weather__sun">
                                 <div class="weekly-weather__sun-graph">
-                                    <svg class="weekly-weather__sun-graph-primary" width="107" height="67"><path d="M -13.5 26.5 a 1 1 0 0 0 80 0" style="transform-origin: 40px 40px;"></path>
-                                    </svg>
-                                    <svg class="weekly-weather__sun-graph-secondary" style="left: 39.2955px; bottom: 39.9922px;"><circle cx="12" cy="12" r="12" fill="#FFF"></circle><path fill="#F7C044" d="M18.405 17.661a1 1 0 0 1-1.437 1.391l-1.665-1.72a1 1 0 1 1 1.437-1.39l1.665 1.72zm-5.541 2.651a1 1 0 0 1-2 0v-2.366a1 1 0 1 1 2 0v2.366zm-6.718-1.624a1 1 0 0 1-1.357-1.469l1.758-1.624a1 1 0 1 1 1.357 1.47l-1.758 1.623zm-2.753-5.769a1 1 0 1 1 .002-2l2.422.001a1 1 0 0 1-.001 2l-2.423-.001zm1.77-6.115A1 1 0 0 1 6.6 5.414l1.664 1.719a1 1 0 0 1-1.436 1.391l-1.665-1.72zm5.751-3.391a1 1 0 1 1 2 0v2.366a1 1 0 0 1-2 0V3.413zm6.5 1.903a1 1 0 1 1 1.356 1.47l-1.757 1.623a1 1 0 1 1-1.357-1.47l1.758-1.623zm3.005 6.114a1 1 0 0 1-.002 2l-2.422-.001a1 1 0 0 1 .001-2l2.423.001z"></path><ellipse fill="#F7C044" cx="11.85" cy="11.935" rx="3.225" ry="3.256"></ellipse></svg>
+                                    <img class="weekly-weather__sun-graph-primary" src="icons/currentconditions/arc.svg" alt="arc-svg">
+                                    <img class="weekly-weather__sun-graph-secondary" src="icons/currentconditions/sun.svg" alt="">
                                 </div>
                                 <div class="weekly-weather__sun-data">
                                     <div class="weekly-weather__sunrise">
@@ -175,34 +171,34 @@
                             </div>
                             <div class="weekly-weather__allTemp">
                                 <div class="weekly-weather__allTemp-item">
-                                    <div class="weekly-weather__allTemp-title">
+                                    <div class="weekly-weather__allTemp-title morning-title">
                                         Утро
                                     </div>
-                                    <div class="weekly-weather__allTemp-value">
+                                    <div class="weekly-weather__allTemp-value morning-value">
                                         -5*
                                     </div>
                                 </div>
                                 <div class="weekly-weather__allTemp-item">
-                                    <div class="weekly-weather__allTemp-title">
+                                    <div class="weekly-weather__allTemp-title day-title">
                                         День
                                     </div>
-                                    <div class="weekly-weather__allTemp-value">
+                                    <div class="weekly-weather__allTemp-value day-value">
                                         -5*
                                     </div>
                                 </div>
                                 <div class="weekly-weather__allTemp-item">
-                                    <div class="weekly-weather__allTemp-title">
+                                    <div class="weekly-weather__allTemp-title evening-title">
                                         Вечер
                                     </div>
-                                    <div class="weekly-weather__allTemp-value">
+                                    <div class="weekly-weather__allTemp-value evening-value">
                                         -5*
                                     </div>
                                 </div>
                                 <div class="weekly-weather__allTemp-item">
-                                    <div class="weekly-weather__allTemp-title">
+                                    <div class="weekly-weather__allTemp-title night-title">
                                         Ночь
                                     </div>
-                                    <div class="weekly-weather__allTemp-value">
+                                    <div class="weekly-weather__allTemp-value night-value">
                                         -5*
                                     </div>
                                 </div>
@@ -214,49 +210,49 @@
                                     <img class="weekly-weather__details-img" src="icons/currentconditions/temp.svg" alt="temp-img">
                                     <div class="weekly-weather__details-descr">Макс./Мин</div>
                                 </div>
-                                <div class="weekly-weather__details-value">5*/0*</div>
+                                <div class="weekly-weather__details-value maxmin">5*/0*</div>
                             </div>
                             <div class="weekly-weather__details">
                                 <div class="weekly-weather__details-wrapper">
                                     <img class="weekly-weather__details-img" src="icons/currentconditions/humidity.svg" alt="humidity-img">
                                     <div class="weekly-weather__details-descr">Влажность</div>
                                 </div>
-                                <div class="weekly-weather__details-value">56 %</div>
+                                <div class="weekly-weather__details-value humidity">56 %</div>
                             </div>
                             <div class="weekly-weather__details">
                                 <div class="weekly-weather__details-wrapper">
                                     <img class="weekly-weather__details-img" src="icons/currentconditions/pressure.svg" alt="pressure-img">
                                     <div class="weekly-weather__details-descr">Давление</div>
                                 </div>
-                                <div class="weekly-weather__details-value">755 мм рт.ст.</div>
+                                <div class="weekly-weather__details-value pressure">755 мм рт.ст.</div>
                             </div>
                             <div class="weekly-weather__details">
                                 <div class="weekly-weather__details-wrapper">
                                     <img class="weekly-weather__details-img" src="icons/currentconditions/cloudiness.svg" alt="cloudiness-img">
                                     <div class="weekly-weather__details-descr">Облачность</div>
                                 </div>
-                                <div class="weekly-weather__details-value">75 %</div>
+                                <div class="weekly-weather__details-value cloudiness">75 %</div>
                             </div>
                             <div class="weekly-weather__details">
                                 <div class="weekly-weather__details-wrapper">
                                     <img class="weekly-weather__details-img" src="icons/currentconditions/uv.svg" alt="uv-img">
                                     <div class="weekly-weather__details-descr">Индекс УФ</div>
                                 </div>
-                                <div class="weekly-weather__details-value">2 из 10</div>
+                                <div class="weekly-weather__details-value uv">2 из 10</div>
                             </div>
                             <div class="weekly-weather__details">
                                 <div class="weekly-weather__details-wrapper">
                                     <img class="weekly-weather__details-img" src="icons/currentconditions/dew-point.svg" alt="dew-point-img">
                                     <div class="weekly-weather__details-descr">Точка росы</div>
                                 </div>
-                                <div class="weekly-weather__details-value">-2,69*</div>
+                                <div class="weekly-weather__details-value dewPoint">-2,69*</div>
                             </div>
                             <div class="weekly-weather__details">
                                 <div class="weekly-weather__details-wrapper">
                                     <img class="weekly-weather__details-img" src="icons/currentconditions/moon.svg" alt="moonphase-img">
                                     <div class="weekly-weather__details-descr">Фаза луны</div>
                                 </div>
-                                <div class="weekly-weather__details-value">Растущий серп</div>
+                                <div class="weekly-weather__details-value moonphase">Растущий серп</div>
                             </div>
                         </div>
                     </div>

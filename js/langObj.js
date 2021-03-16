@@ -44,8 +44,7 @@ export const langObj = {
             today: 'Сегодня',
             hourly: 'Почасовой прогноз',
             week: 'На 7 дней',
-            twoWeeks: 'На 14 дней',
-            month: 'На месяц',
+            airQuality: 'Индекс качества воздуха',
             maps: 'Карты'
         },
         menu: {
@@ -103,8 +102,7 @@ export const langObj = {
             today: 'Today',
             hourly: 'Hourly Forecast',
             week: 'For 7 days',
-            twoWeeks: 'For 14 days',
-            month: 'For Month',
+            airQuality: 'Air Quality Index',
             maps: 'Maps'
         },
         menu: {

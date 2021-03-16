@@ -11,36 +11,36 @@
     <meta name="description" content="Daily Weather Forecast and more">
 
     <!-- Open Graph / Facebook -->
-    <!-- <meta property="og:type" content="website">
-    <meta property="og:url" content="../https://dev1ltj.github.io/WeatherApp/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dev1ltj.github.io/WeatherApp/">
     <meta property="og:title" content="The Weather Forecast">
     <meta property="og:description" content="Daily Weather Forecast and more">
-    <meta property="og:image" content="../img/meta.png"> -->
+    <meta property="og:image" content="img/meta.png">
 
     <!-- Twitter -->
-    <!-- <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://dev1ltj.github.io/WeatherApp/">
     <meta property="twitter:title" content="The Weather Forecast">
     <meta property="twitter:description" content="Daily Weather Forecast and more">
-    <meta property="twitter:image" content="../img/meta.png">
+    <meta property="twitter:image" content="img/meta.png">
 
-    <link rel="apple-touch-icon" sizes="57x57" href="../icons/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="../icons/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="../icons/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="../icons/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="../icons/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="../icons/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="../icons/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="../icons/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="../icons/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="../icons/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="../icons/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../icons/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="icons/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icons/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icons/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icons/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="icons/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon/favicon-16x16.png">
     <link rel="manifest" href="icons/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="../icons/favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff"> -->
+    <meta name="msapplication-TileImage" content="icons/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
@@ -97,8 +97,8 @@
                 </div>
             </div>
         </div>
-</header>
-<div class="nav">
+    </header>
+    <div class="nav">
     <div class="container">
         <nav>
             <li class="nav__item">
@@ -108,21 +108,18 @@
                 <a class="nav__hourly" target="_self" href="#">Почасовой прогноз</a>
             </li>
             <li class="nav__item">
-                <a class="nav__week" href="#">На 7 дней</a>
+                <a class="nav__week" href="../weekly/week.html">На 7 дней</a>
             </li>
             <li class="nav__item">
-                <a class="nav__twoWeeks" href="#">На 14 дней</a>
-            </li>
-            <li class="nav__item">
-                <a class="nav__month" href="#">На месяц</a>
+                <a class="nav__air-quality" href="#">Индекс качества воздуха</a>
             </li>
             <li class="nav__item">
                 <a class="nav__maps" href="#">Карты</a>
             </li>
         </nav>
     </div>
-</div>
-<main class="screen">
+    </div>
+    <main class="screen">
     <div class="container">
         <div class="hourly-weather">
             <div class="hourly-weather__title">
@@ -226,11 +223,11 @@
         </div>
         
     </div>
-</main>
-<div class="pageup fade">
+    </main>
+    <div class="pageup fade">
     <svg class="chev"aria-hidden="true"class="svg-inline--fa fa-chevron-circle-up fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M8 256C8 119 119 8 256 8s248 111 248 248-111 248-248 248S8 393 8 256zm231-113.9L103.5 277.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L256 226.9l101.6 101.6c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L273 142.1c-9.4-9.4-24.6-9.4-34 0z"></path></svg>
-</div>
-<footer class="footer">
+    </div>
+    <footer class="footer">
     <div class="container">
         <div class="footer__wrapper">
             <div class="footer__contacts">
@@ -267,11 +264,11 @@
             </div>
         </div>
     </div>
-</footer>
-<script src="js/settings.js" type="module"></script>
-<script src="js/script.js" type="module"></script>
-<script src="js/menu.js" type="module"></script>
-<script src="js/toggleItem.js"></script>
-<script src="js/scroll.js"></script>
+    </footer>
+    <script src="js/settings.js" type="module"></script>
+    <script src="js/script.js" type="module"></script>
+    <script src="js/menu.js" type="module"></script>
+    <script src="js/toggleItem.js"></script>
+    <script src="js/scroll.js"></script>
 </body>
 </html>

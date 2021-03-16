@@ -25,7 +25,7 @@ let windSpeed = document.querySelector('.current-conditions__wind-value'),
     sunrise = document.querySelector('.current-conditions__sunrise-text'),
     sunset = document.querySelector('.current-conditions__sunset-text'),
     graphSun = document.querySelector('.current-conditions__graph-secondary'),
-    graphRad = document.querySelector('.current-conditions__graph-primary path').getBoundingClientRect().width/2;
+    graphRad = document.querySelector('.current-conditions__graph-primary').getBoundingClientRect().width/2;
 //today, hourly & daily weather
 let hourlyItems = document.querySelectorAll('.hourly-weather__details-item'),
     dailyItems = document.querySelectorAll('.daily-weather__details-item'),
@@ -63,12 +63,11 @@ function setCurrentConditions (responseData) {
     cloudiness.textContent = `${responseData.current.clouds} %`;
     dewPoint.textContent = `${responseData.current.dew_point}°`;
     uvIndex.textContent = `${Math.round(responseData.current.uvi)} ${langObj[settings.lang].from} 10`;
-    moonPhase.textContent = `${langObj[settings.lang].moon[moon.get()]}`;
-    console.log(moon.get());
+    moonPhase.textContent = `${langObj[settings.lang].moon[moonphase(new Date(responseData.current.dt*1000))]}`;
     minMax.textContent = `${Math.round(responseData.daily[0].temp.max)}°/${Math.round(responseData.daily[0].temp.min)}°`;
     sunrise.textContent = `${new Intl.DateTimeFormat(settings.lang, {hour: '2-digit', minute: '2-digit'}).format(new Date(responseData.daily[0].sunrise*1000))}`;
     sunset.textContent = `${new Intl.DateTimeFormat(settings.lang, {hour: '2-digit', minute: '2-digit'}).format(new Date(responseData.daily[0].sunset*1000))}`;
-    moveSun (responseData);
+    //moveSun (responseData);
 }
 
 function setHourlyWeather (responseData) {
@@ -124,73 +123,65 @@ function setTodayWeather (responseData) {
 }
 
 //Взято с gitHUB
-function moonphase() {
-    let MOONPHASE = {
-        get: function() {
-            let d = new Date(),
-                year = d.getFullYear(),
-                month = d.getMonth(),
-                date = d.getDate(),
-                c,e,jd,b,diff;
+function moonphase(requestDate) {
 
-            if (month < 3) {
-                year--;
-                month += 12;
-            }
+    let d = requestDate,
+        year = d.getFullYear(),
+        month = d.getMonth(),
+        date = d.getDate(),
+        c,e,jd,b,diff;
 
-            month++;
-
-            c = 365.25 * year;
-            e = 30.6 * month;
-            jd = c + e + date - 694039.09;
-            jd /= 29.5305882;
-            b = parseInt(jd);
-            jd -= b;
-            b = Math.round(jd * 8);
-
-            diff = jd*10;
-            diff = +diff.toFixed(2);
-
-            if (b >= 8 ) {
-                b = 0;
-            }
-
-            switch (b) {
-                case 0:
-                    return "newmoon";
-                    break;
-                case 1:
-                    return "waxingcrescent";
-                    break;
-                case 2:
-                    return "firstquarter";
-                    break;
-                case 3:
-                    return "waxinggibbous";
-                    break;
-                case 4:
-                    return "fullmoon";
-                    break;
-                case 5:
-                    return "waninggibbous";
-                    break;
-                case 6:
-                    return "thirdquarter";
-                    break;
-                case 7:
-                    return "waningcrescent";
-                    break;
-                default:
-                    console.log('Error');
-            }
-        }
-    };
-
-    return {
-        get: MOONPHASE.get
+    if (month < 3) {
+        year--;
+        month += 12;
     }
-}
-const moon = moonphase();
+
+    month++;
+
+    c = 365.25 * year;
+    e = 30.6 * month;
+    jd = c + e + date - 694039.09;
+    jd /= 29.5305882;
+    b = parseInt(jd);
+    jd -= b;
+    b = Math.round(jd * 8);
+
+    diff = jd*10;
+    diff = +diff.toFixed(2);
+
+    if (b >= 8 ) {
+        b = 0;
+    }
+
+    switch (b) {
+        case 0:
+            return "newmoon";
+            break;
+        case 1:
+            return "waxingcrescent";
+            break;
+        case 2:
+            return "firstquarter";
+            break;
+        case 3:
+            return "waxinggibbous";
+            break;
+        case 4:
+            return "fullmoon";
+            break;
+        case 5:
+            return "waninggibbous";
+            break;
+        case 6:
+            return "thirdquarter";
+            break;
+        case 7:
+            return "waningcrescent";
+            break;
+        default:
+            console.log('Error');
+    }
+};
 
 //Доработать
 function moveSun (responseData) {

@@ -17,7 +17,6 @@ export function createItem () {
     conditions.className = 'hourly-weather__item-conditions';
     let conditionsImg = document.createElement('IMG');
     conditionsImg.className = 'hourly-weather__item-conditions-img';
-    conditionsImg.setAttribute('src', 'icons/openweathermap/01d.svg');
     conditionsImg.setAttribute('alt', 'img');
     let conditionsDescr = document.createElement('DIV');
     conditionsDescr.className = 'hourly-weather__item-conditions-descr';
@@ -179,4 +178,11 @@ export function createItem () {
     item.append(secondary);
 
     return item;
+}
+
+export function createDay (date) {
+    let dateElem = document.createElement('DIV');
+    dateElem.className = 'hourly-weather__day';
+    dateElem.textContent = `${new Intl.DateTimeFormat(settings.lang, {weekday: 'long', day: '2-digit', month: 'long'}).format(date)}`;
+    return dateElem;
 }

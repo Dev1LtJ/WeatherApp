@@ -20,8 +20,7 @@ let todaysWeatherTitle = document.querySelector('.today-weather .card-header__pr
 let navToday = document.querySelector('.nav__today'),
     navHourly = document.querySelector('.nav__hourly'),
     navWeek = document.querySelector('.nav__week'),
-    navTwoWeeks = document.querySelector('.nav__twoWeeks'),
-    navMonth = document.querySelector('.nav__month'),
+    navAirQuality = document.querySelector('.nav__air-quality'),
     navMaps = document.querySelector('.nav__maps');
 
 let footerContact = document.querySelector('.footer__contacts-title');
@@ -64,8 +63,7 @@ export function renderLangDOM () {
     navToday.textContent = langObj[settings.lang].nav.today;
     navHourly.textContent = langObj[settings.lang].nav.hourly;
     navWeek.textContent = langObj[settings.lang].nav.week;
-    navTwoWeeks.textContent = langObj[settings.lang].nav.twoWeeks;
-    navMonth.textContent = langObj[settings.lang].nav.month;
+    navAirQuality.textContent = langObj[settings.lang].nav.airQuality;
     navMaps.textContent = langObj[settings.lang].nav.maps;
     footerContact.textContent = langObj[settings.lang].contact;
     menuLang.textContent = langObj[settings.lang].menu.lang;

@@ -58,13 +58,6 @@
         overflow: hidden;
         width: 100px;
         height: 65px;
-        path {
-            stroke: #e87538;
-            fill: none;
-            stroke-width: 3px;
-            stroke-linecap: round;
-            transform: rotate(180deg);
-        }
     }
     &__graph-secondary {
         bottom: 0px;
