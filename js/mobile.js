@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
         if (!menu.contains(event.target) &&
             !menuButton.contains(event.target) &&
             menu.classList.contains('active')) {
+            menuButton.classList.toggle('active');
             menu.classList.toggle('active');
         }
     });
