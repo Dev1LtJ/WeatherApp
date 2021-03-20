@@ -23,6 +23,8 @@
 
 @media (max-width: 575px) {
     .header {
+        position: fixed;
+        z-index: 1000;
         height: 70px;
         &__wrapper {
             grid-template-columns: 50px 180px auto;
@@ -40,7 +42,6 @@
             display: none;
         }
         .hamburger {
-            position: absolute;
             top: 15px;
             right: 5px;
             height: 21px;
@@ -52,11 +53,22 @@
             span {
                 display: block;
                 background: $white-color;
-                width: 25px;
-                height: 3px;
-            }
-            span.long {
                 width: 30px;
+                height: 3px;
+                transition: 0.5s all;
+            }
+            &.active {
+                span {
+                    &:nth-child(1) {
+                        transform: translateY(10px) rotate(-45deg);
+                    }
+                    &:nth-child(2) {
+                        display: none;
+                    }
+                    &:nth-child(3) {
+                        transform: translateY(-8px) rotate(45deg);
+                    }
+                }
             }
         }
     }

@@ -7,6 +7,7 @@
 @media (max-width: 575px) {
     .screen {
         &__wrapper {
+            margin-top: 70px;
             display: grid;
             grid-template-columns: 1fr;
         }
