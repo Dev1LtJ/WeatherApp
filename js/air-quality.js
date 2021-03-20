@@ -11,7 +11,7 @@ let ring = document.querySelector('.air-quality__green-ring'),
 ring.style.strokeDasharray = `${ringReference} ${ringReference}`;
 
 export async function setAirQualityData () {
-    let requestURL = `http://api.openweathermap.org/data/2.5/air_pollution?lat=53.90249633789063&lon=27.56148147583008&appid=400da6eb26c3c55fb657e09c050e94bd`;
+    let requestURL = `https://api.openweathermap.org/data/2.5/air_pollution?lat=53.90249633789063&lon=27.56148147583008&appid=400da6eb26c3c55fb657e09c050e94bd`;
     let response = await fetch(requestURL);
     if (response.ok) {
         let responseData = await response.json();
