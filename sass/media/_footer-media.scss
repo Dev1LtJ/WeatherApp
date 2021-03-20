@@ -1,0 +1,42 @@
+@media (max-width:  767px) {
+    .footer {
+        font-size: 18px;
+        &__contacts-item {
+            margin-left: 15px;
+            img {
+                height: 25px;
+            }
+        }
+        &__powered {
+            svg {
+                height: 40px;
+            }
+        }
+    }
+}
+
+@media (max-width:  575px) {
+    .footer {
+        height: 140px;
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+        &__contacts {
+            flex-wrap: wrap;
+        }
+        &__contacts-title {
+            text-align: center;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+        &__powered {
+            margin-top: 10px;
+            width: 100%;
+            justify-content: center;
+        }
+        &__powered-title {
+            margin-left: 15px;
+        }
+    }
+}

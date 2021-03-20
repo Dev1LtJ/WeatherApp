@@ -1,0 +1,21 @@
+@media (max-width:  991px) {
+    .current-conditions {
+        &__details-item {
+            width: 100%;
+            margin-right: 0;
+        }
+        &__sun {
+            width: 200px;
+            margin: 0 auto;
+        }
+    }
+}
+
+
+@media (max-width:  575px) {
+    .current-conditions {
+        .card-header_black {
+            text-align: center;
+        }
+    }
+}

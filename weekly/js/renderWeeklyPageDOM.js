@@ -46,7 +46,7 @@ export function renderLangDOM () {
     menuThemeLight.textContent = langObj[settings.lang].menu.themeLight;
     menuThemeDark.textContent = langObj[settings.lang].menu.themeDark;
     
-    twoWeeksButton.textContent = langObj[settings.lang].nav.twoWeeks;
+    twoWeeksButton.textContent = langObj[settings.lang].nav.hourly;
 }
 
 export function renderThemeDOM () {

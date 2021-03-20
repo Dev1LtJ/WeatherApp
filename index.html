@@ -96,6 +96,11 @@
                         </div>
                     </div>
                 </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span class="long"></span>
+                    <span></span>
+                </div>
             </div>
     </header>
     <div class="nav">
@@ -111,10 +116,10 @@
                     <a class="nav__week" href="weekly/week.html">На 7 дней</a>
                 </li>
                 <li class="nav__item">
-                    <a class="nav__air-quality" href="#">Индекс качества воздуха</a>
+                    <a class="nav__air-quality" href="air-quality/air.html">Индекс качества воздуха</a>
                 </li>
                 <li class="nav__item">
-                    <a class="nav__maps" href="#">Карты</a>
+                    <a class="nav__maps" href="maps/maps.html">Карты</a>
                 </li>
             </nav>
         </div>
@@ -401,9 +406,11 @@
                                 <div class="air-quality__data">
                                     <div class="air-quality__progress-wrapper">
                                         <svg class="air-quality__progress" height="60" width="60">
-                                            <circle class="air-qualiry__gray-ring" stroke-width="4" fill="transparent" r="26" cx="50%" cy="50%" stroke="#00E838">
+                                            <circle class="air-quality__gray-ring" stroke-width="4" fill="transparent" r="26" cx="50%" cy="50%" stroke="#dedede">
                                             </circle>
-                                            <text x="20%" y="70%" font-size="35px">
+                                            <circle style="transition: stroke-dashoffset 0.35s; transform: rotate(-90deg); transform-origin: 50% 50%;" class="air-quality__green-ring" stroke-width="4" fill="transparent" r="26" cx="50%" cy="50%" stroke="#00E838">
+                                            </circle>
+                                            <text class="air-quality__progress-text" x="35%" y="70%" font-size="35px" font-weight="400">
                                                 44
                                             </text>
                                         </svg>
@@ -413,7 +420,7 @@
                                         <div class="air-quality__phrase-descr">Качество воздуха удовлетворительное, уровень загрязнений почти не вызывает опасений.</div>
                                     </div>
                                 </div>
-                                <a class="air-quality__more button button_more" href="#">Подробнее</a>
+                                <a class="air-quality__more button button_more" href="air-quality/air.html">Подробнее</a>
                             </div>
                         </div>
                     </div>
@@ -463,5 +470,6 @@
     <script src="js/settings.js" type="module"></script>
     <script src="js/script.js" type="module"></script>
     <script src="js/menu.js" type="module"></script>
+    <script src="js/air-quality.js" type="module"></script>
 </body>
 </html>

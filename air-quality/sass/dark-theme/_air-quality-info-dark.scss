@@ -1,0 +1,27 @@
+.dark {
+    .air-quality {
+        &__info {
+            color: $white-color;
+            background-color: $main-dark-color;
+            box-shadow: 0 0 10px 0 rgba($main-dark-color, 0.2);
+        }
+        &__item {
+            border-bottom: 1px solid $grey2-color;
+        }
+        &__item-logo {
+            border: 5px solid $main-color;
+        }
+        &__item-text {
+            color: rgba($white-color, 0.5);
+        }
+        &__button {
+            color: $white-color;
+            background-color: $main-color;
+            border: 1px solid $main-color;
+            &:hover {
+                color: $white-color;
+                box-shadow: 0 0 5px 0 $main-color;
+            }
+        }
+    }
+}

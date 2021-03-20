@@ -33,6 +33,9 @@ let menuLang = document.querySelector('.menu__title_lang'),
     menuThemeLight = document.querySelector('#light span'),
     menuThemeDark = document.querySelector('#dark span');
 
+let airQualityTitle = document.querySelector('.air-quality .card-header__primary'),
+    airQualityBtn = document.querySelector('.air-quality__more');
+
 import {langObj} from '../js/langObj.js';
 import {settings} from '../js/settings.js';
 import {setMainPageData} from './setMainPageData.js';
@@ -73,6 +76,8 @@ export function renderLangDOM () {
     menuThemeTitle.textContent = langObj[settings.lang].menu.themeTitle;
     menuThemeLight.textContent = langObj[settings.lang].menu.themeLight;
     menuThemeDark.textContent = langObj[settings.lang].menu.themeDark;
+    airQualityTitle.textContent = langObj[settings.lang].aqi.title;
+    airQualityBtn.textContent = langObj[settings.lang].buttons.aqi;
 }
 
 export function renderThemeDOM () {

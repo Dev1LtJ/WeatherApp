@@ -1,0 +1,25 @@
+@media (max-width:  767px) {
+    .today-weather {
+        &__details-temp {
+            font-size: 30px;
+            line-height: 30px;
+        }
+        &__details-pop {
+            flex-direction: column;
+        }
+        &__details-popValue {
+            margin-left: 0;
+            margin-top: 5px;
+        }
+    }
+}
+
+@media (max-width:  575px) {
+    .today-weather {
+        .card-header_black {
+            text-align: center;
+        }
+    }
+}
+
+

@@ -1,0 +1,21 @@
+.dark {
+    .air-quality {
+        &__main {
+            color: $white-color;
+            background-color: $main-dark-color;
+            box-shadow: 0 0 10px 0 rgba($main-dark-color, 0.2);
+        }
+        &__main-rightCol {
+            border-image: linear-gradient(180deg, $main-dark-color, $grey2-color, $main-dark-color) 1;
+        }
+        &__main-value {
+            fill: $white-color;
+        }
+        &__main-gray-ring {
+            stroke: $darkgrey-color;
+        }
+        &__main-phrase {
+            color: rgba($white-color, 0.5);
+        }
+    }
+}

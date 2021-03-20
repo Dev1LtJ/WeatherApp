@@ -1,0 +1,107 @@
+.air-quality {
+    &__main {
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: 300;
+        color: $black-color;
+        background-color: $white-color;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 rgba($black-color, 0.2);
+        padding: 20px 30px;
+    }
+    &__main-title {
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 30px;
+        margin: 0;
+    }
+    &__main-data {
+        margin-top: 20px;
+        display: flex;
+    }
+    &__main-leftCol {
+        width: 70%;
+        padding-right: 30px;
+    }
+    &__main-leftCol-wrapper {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+    }
+    &__main-descr {
+        margin-left: 30px;
+    }
+    &__main-text {
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 26px;
+    }
+    &__main-phrase {
+        margin-top: 10px;
+        font-size: 20px;
+        line-height: 24px;
+        color: $grey2-color;
+    }
+    &__main-rightCol {
+        padding-left: 30px;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        border-left: 1px solid;
+        border-image: linear-gradient(180deg, $white-color, $grey-color, $white-color) 1;
+    }
+    &__levels-title {
+        font-weight: 400;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    &__good-level,
+    &__fair-level,
+    &__moderate-level,
+    &__poor-level {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+    &__veryPoor-level {
+        align-items: center;
+        display: flex;
+    }
+    &__good-dot {
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        margin-right: 10px;
+        background-color: #00E838;
+    }
+    &__fair-dot {
+        margin-right: 10px;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        background-color: #FFFF24;
+    }
+    &__moderate-dot {
+        margin-right: 10px;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        background-color: #FF7200;
+    }
+    &__poor-dot {
+        margin-right: 10px;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        background-color: #FF0000;
+    }
+    &__veryPoor-dot {
+        margin-right: 10px;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        background-color: #9D3D8C;
+    }
+}

@@ -1,0 +1,43 @@
+@media (max-width:  767px) {
+    .current-weather {
+        &__primary-wrapper {
+            margin-top: 10px;
+        }
+        &__temp-value {
+            font-size: 70px;
+            line-height: 70px;
+        }
+        &__temp-phrase {
+            font-size: 22px;
+            line-height: 22px;
+        }
+        &__secondary {
+            justify-content: flex-start;
+        }
+        &__temp-img {
+            width: 100px;
+            height: 100px;
+        }
+        &__feels {
+            font-size: 16px;
+            line-height: 16px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .current-weather {
+        &__secondary {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+        }
+        .card-header {
+            width: 60%;
+        }
+        &__temp-phrase {
+            font-size: 20px;
+            line-height: 20px;
+        }
+    }
+}

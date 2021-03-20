@@ -39,6 +39,7 @@ export const langObj = {
             aqi: 'Подробнее',
             hourly: 'Прогноз на 48ч',
             daily: 'Прогноз на 7дн',
+            today: 'Прогноз на сегодня'
         },
         nav: {
             today: 'Сегодня',
@@ -55,7 +56,42 @@ export const langObj = {
             themeTitle: 'Тема',
             themeLight: 'Светлая',
             themeDark: 'Темная'
-        }
+        },
+        aqi: {
+            title: 'Индекс качества воздуха',
+            level: 'Уровни качества воздуха',
+            good: 'Очень хорошее',
+            fair: 'Хорошее',
+            moderate: 'Среднее',
+            poor: 'Плохое',
+            veryPoor: 'Очень плохое',
+            goodPhrase: 'Качество воздуха удовлетворительное, уровень загрязнений почти не вызывает опасений.',
+            fairPhrase: 'Качество воздуха приемлемое, однако для некоторых типов загрязнений есть средний риск воздействия на самочувствие малой части людей, чувствительных к загрязнению воздуха.',
+            moderatePhrase: 'Чувствительные люди могут испытывать проблемы со здоровьем. Вероятно, это не повлияет на остальные слои населения.',
+            poorPhrase: 'У любого человека могут начаться проблемы со здоровьем, воздействие на чувствительных людей может быть более серьезным.',
+            veryPoorPhrase: 'Предупреждения касательно здоровья, означающие экстренную ситуацию. Вполне возможно, что это повлияет на все население.',
+            allPollutants: 'Все загрязняющие вещества',
+            pollutants: {
+                concentration: 'Концентрация',
+                co: 'Монооксид углерода',
+                co_t: 'CO',
+                no: 'Монооксид азота',
+                no_t: 'NO',
+                no2: 'Оксид азота',
+                no2_t: 'NO<sub>2</sub>',
+                o3: 'Озон',
+                o3_t: 'O<sub>3</sub>',
+                so2: 'Диоксид серы',
+                so2_t: 'SO<sub>2</sub>',
+                nh3: 'Аммиак',
+                nh3_t: 'NH<sub>3</sub>',
+                pm2_5: 'Взвешенные частицы меньше 2.5 микрон',
+                pm2_5_t: 'PM<br>2.5',
+                pm10: 'Взвешенные частицы меньше 10 микрон',
+                pm10_t: 'PM<br>10'
+            },
+            units: 'мкг/м<sup>3</sup>',
+        }   
     },
     en: {
         headerTitle: 'Weather around the world',
@@ -94,9 +130,10 @@ export const langObj = {
             night: 'Night',
         },
         buttons: {
-            aqi: 'more',
+            aqi: 'More',
             hourly: 'Forecast for 48h',
             daily: 'Forecast for 7d',
+            today: 'Forecast for today'
         },
         nav: {
             today: 'Today',
@@ -113,6 +150,41 @@ export const langObj = {
             themeTitle: 'Theme',
             themeLight: 'Light',
             themeDark: 'Dark'
+        },
+        aqi: {
+            title: 'Air Quality Index',
+            level: 'Air Quality Levels',
+            good: 'Good',
+            fair: 'Fair',
+            moderate: 'Moderate',
+            poor: 'Poor',
+            veryPoor: 'Very Poor',
+            goodPhrase: 'Air quality is considered satisfactory, and air pollution poses little or no risk.',
+            fairPhrase: 'Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.',
+            moderatePhrase: 'Members of sensitive groups may experience health effects. The general public is not likely to be affected.',
+            poorPhrase: 'Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects.',
+            veryPoorPhrase: 'Health warnings of emergency conditions. The entire population is more likely to be affected.',
+            allPollutants: 'All Pollutants',
+            pollutants: {
+                concentration: 'Concentration',
+                co: 'Carbon monoxide',
+                co_t: 'CO',
+                no: 'Nitrogen monoxide',
+                no_t: 'NO',
+                no2: 'Nitrogen dioxide',
+                no2_t: 'NO<sub>2</sub>',
+                o3: 'Ozone',
+                o3_t: 'O<sub>3</sub>',
+                so2: 'Sulphur dioxide',
+                so2_t: 'SO<sub>2</sub>',
+                nh3: 'Ammonia',
+                nh3_t: 'NH<sub>3</sub>',
+                pm2_5: 'Particulate matter less than 2.5 microns',
+                pm2_5_t: 'PM<br>2.5',
+                pm10: 'Particulate matter less than 10 microns',
+                pm10_t: 'PM<br>10'
+            },
+            units: 'μg/m<sup>3</sup>',
         }
     }
 };

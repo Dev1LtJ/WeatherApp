@@ -1,0 +1,14 @@
+@media (max-width:  991px) {
+    .screen {
+        padding: 12px 12px;
+    }
+}
+
+@media (max-width: 575px) {
+    .screen {
+        &__wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+    }
+}

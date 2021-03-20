@@ -1,0 +1,20 @@
+.dark {
+    .air-quality {
+        background-color: $main-dark-color;
+        color: $white-color;
+        box-shadow: 0 0 10px 0 rgba($black-color, 0.2);
+        &__phrase-descr {
+            color: rgba($white-color, 0.5);
+        }
+        &__progress {
+            overflow: hidden;
+            margin-right: 10px;
+        }
+        &__progress-text {
+            fill: $white-color;
+        }
+        &__gray-ring {
+            stroke: $darkgrey-color;
+        }
+    }
+}

@@ -3,7 +3,7 @@
     background-image: linear-gradient(#7197b6,#c4d7d8,#e4e8e8);
     &__wrapper {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) 350px;
+        grid-template-columns: 2fr 1fr;
         grid-column-gap: 12px;
     }
 }
