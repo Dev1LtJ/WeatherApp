@@ -36,6 +36,17 @@ let menuLang = document.querySelector('.menu__title_lang'),
 let airQualityTitle = document.querySelector('.air-quality .card-header__primary'),
     airQualityBtn = document.querySelector('.air-quality__more');
 
+let mobileNavToday = document.querySelector('.mobile__today'),
+    mobileNavHourly = document.querySelector('.mobile__hourly'),
+    mobileNavWeek = document.querySelector('.mobile__week'),
+    mobileNavAirQuality = document.querySelector('.mobile__air-quality'),
+    mobileNavMaps = document.querySelector('.mobile__maps'),
+    mobileHeaderSearch = document.querySelector('.mobile__search-input'),
+    mobileMenuUnitsMetric = document.getElementById('mobile_metric'),
+    mobileMenuUnitsImperial = document.getElementById('mobile_imperial'),
+    mobileMenuThemeLight = document.querySelector('#mobile_light span'),
+    mobileMenuThemeDark = document.querySelector('#mobile_dark span');
+
 import {langObj} from '../js/langObj.js';
 import {settings} from '../js/settings.js';
 import {setMainPageData} from './setMainPageData.js';
@@ -78,6 +89,17 @@ export function renderLangDOM () {
     menuThemeDark.textContent = langObj[settings.lang].menu.themeDark;
     airQualityTitle.textContent = langObj[settings.lang].aqi.title;
     airQualityBtn.textContent = langObj[settings.lang].buttons.aqi;
+
+    mobileNavToday.textContent = langObj[settings.lang].nav.today;
+    mobileNavHourly.textContent = langObj[settings.lang].nav.hourly;
+    mobileNavWeek.textContent = langObj[settings.lang].nav.week;
+    mobileNavAirQuality.textContent = langObj[settings.lang].nav.airQuality;
+    mobileNavMaps.textContent = langObj[settings.lang].nav.maps;
+    mobileHeaderSearch.placeholder = langObj[settings.lang].headerSearchPlaceholder;
+    mobileMenuUnitsMetric.textContent = langObj[settings.lang].menu.unitsMetric;
+    mobileMenuUnitsImperial.textContent = langObj[settings.lang].menu.unitsImperial;
+    mobileMenuThemeLight.textContent = langObj[settings.lang].menu.themeLight;
+    mobileMenuThemeDark.textContent = langObj[settings.lang].menu.themeDark;
 }
 
 export function renderThemeDOM () {
