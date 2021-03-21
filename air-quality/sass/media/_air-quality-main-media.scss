@@ -1,4 +1,12 @@
 @media (max-width:  767px) {
+    .dark {
+        .air-quality {
+            &__main-rightCol {
+                border-image: none;
+                border-color: $darkgrey-color;
+            }
+        }
+    }
     .air-quality {
         &__main {
             padding: 15px 15px;
@@ -17,7 +25,8 @@
             width: 100%;
             border-left: none;
             border-top: 1px solid;
-            border-image: linear-gradient(90deg, $white-color, $grey-color, $white-color) 1;
+            border-image: none;
+            border-color: $grey-color;
             display: block;
         }
         &__levels {
