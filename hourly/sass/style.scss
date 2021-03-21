@@ -13,6 +13,12 @@
     margin: 0 auto;
 }
 
+@media(max-width:  991px) {
+    .container {
+        max-width: 960px; 
+    }
+}
+
 @import 'blocks/header';
 @import 'blocks/menu';
 @import 'blocks/nav';
@@ -30,3 +36,13 @@
 @import 'dark-theme/header-dark';
 @import 'dark-theme/hourly-weather-dark';
 @import 'dark-theme/pageup-dark';
+@import 'dark-theme/mobile-dark';
+
+@import 'media/card-header-media';
+@import 'media/footer-media';
+@import 'media/header-media';
+@import 'media/header-media';
+@import 'media/mobile';
+@import 'media/nav-media';
+@import 'media/screen-media';
+@import 'media/hourly-weather-media';

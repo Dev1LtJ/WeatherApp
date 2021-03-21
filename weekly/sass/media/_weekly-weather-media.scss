@@ -1,0 +1,131 @@
+@media (max-width:  991px) {
+    .weekly-weather {
+        padding: 10px 15px;
+        &__secondary {
+            padding: 10px 5px;
+        }
+        &__details {
+            width: 49%;
+            padding: 10px 0;
+            img {
+                margin-right: 5px;
+            }
+        }
+        &__allTemp {
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+        &__allTemp-item {
+            width: 50%;
+            &:last-of-type, &:nth-of-type(2) {
+                border: none;
+            }
+        }
+        &__allTemp-value {
+            margin-top: 5px;
+        }
+        &__sun {
+            width: 200px;
+        }
+    }
+}
+
+@media (max-width:  767px) {
+    .weekly-weather {
+        &__secondary {
+            flex-wrap: wrap;
+        }
+        &__column {
+            width: 100%;
+        }
+        &__allTemp-item {
+            width: 25%;
+            &:last-of-type {
+                border: none;
+            }
+            &:nth-of-type(2) {
+                border-right: 1px solid;
+                border-image: linear-gradient(180deg, $white-color, $grey-color, $white-color) 1;
+            }
+        }
+        &__pop,
+        &__wind,
+        &__conditions {
+            img, svg {
+                margin-right: 5px;
+            }
+        }
+        &__conditions {
+            width: 30%;
+        }
+        &__temp {
+            width: 15%;
+        }
+        &__pop {
+            width: 15%;
+        }
+        &__wind {
+            width: 25%;
+        }
+    }
+}
+
+@media (max-width:  575px) {
+    .weekly-weather {
+        padding: 10px;
+        margin-top: 70px;
+        &__column {
+            &_wrap {
+                width: 100%;
+                flex-direction: column;
+                flex-wrap: nowrap;
+            }
+        }
+        &__details {
+            width: 100%;
+        }
+        &__secondary {
+            padding: 5px;
+        }
+        &__button {
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 20px;
+            width: 70%;
+        }
+        &__primary {
+            flex-wrap: wrap;
+        }
+        &__day {
+            width: 20%;
+            margin-bottom: 10px;
+        }
+        &__conditions {
+            width: 55%;
+            margin-bottom: 10px;
+        }
+        &__temp {
+            width: 25%;
+            margin-bottom: 10px;
+        }
+        &__pop {
+            width: 30%;
+        }
+        &__wind {
+            width: 60%;
+        }
+        &__temp-day {
+            color: $blue-color;
+            font-size: 22px;
+            line-height: 20px;
+            font-weight: 400;
+        }
+        &__allTemp-item {
+            width: 50%;
+            &:last-of-type, &:nth-of-type(2) {
+                border: none;
+            }
+        }
+    }
+}

@@ -42,7 +42,8 @@
                 color: $white-color;
             }
             &:focus {
-                outline: 5px auto #fff;
+                outline: none;
+                border: 2px solid $white-color;
             }
         }
         &-icon {

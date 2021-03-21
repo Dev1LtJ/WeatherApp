@@ -1,0 +1,121 @@
+@media (max-width:  991px) {
+    .hourly-weather {
+        &__item-secondary {
+            padding: 10px 15px 0 10px;
+            flex-wrap: wrap;
+        }
+        &__item-feels,
+        &__item-pressure,
+        &__item-humidity,
+        &__item-dewPoint,
+        &__item-cloudiness,
+        &__item-uv {
+        margin-bottom: 10px;
+        }
+    }
+}
+
+@media (max-width:  767px) {
+    .hourly-weather {
+        margin-top: 70px;
+        &__title {
+            margin-bottom: 0;
+        }
+        padding: 20px 15px;
+        &__item-conditions {
+            width: 30%;
+        }
+        &__item-pop {
+            width: 15%;
+        }
+        &__item-wind {
+            width: 25%;
+        }
+        &__item-pop,
+        &__item-wind,
+        &__item-conditions {
+        img {
+            margin-right: 5px;
+        }
+    }
+    }
+}
+
+@media (max-width:  575px) {
+    .hourly-weather {
+        &__item-primary {
+            flex-wrap: wrap;
+        }
+        &__item-more {
+            align-self: center;
+        }
+        &__item-time {
+            width: 25%;
+        }
+        &__item-temp {
+            width: 15%;
+        }
+        &__item-conditions {
+            width: 60%;
+        }
+        &__item-wind {
+            width: 60%;
+        }
+        &__item-pop {
+            width: 30%;
+        }
+        &__item-time,
+        &__item-temp,
+        &__item-conditions,
+        &__item-wind,
+        &__item-pop {
+            margin-top: 10px;
+        }
+        &__item {
+            padding: 0 0 10px 0;
+        }
+        &__item-secondary {
+            flex-direction: column;
+            padding: 10px 5px 0 5px;
+        }
+        &__item-feels,
+        &__item-pressure,
+        &__item-humidity,
+        &__item-dewPoint,
+        &__item-cloudiness,
+        &__item-uv {
+            width: 100%;
+            justify-content: space-between;
+            img {
+                margin-right: 5px;
+                width: 24px;
+            }
+        }
+        &__item-feels-column,
+        &__item-pressure-column,
+        &__item-humidity-column,
+        &__item-dewPoint-column,
+        &__item-cloudiness-column,
+        &__item-uv-column {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__item-feels-descr,
+        &__item-pressure-descr,
+        &__item-humidity-descr,
+        &__item-dewPoint-descr,
+        &__item-cloudiness-descr,
+        &__item-uv-descr {
+            margin-top: 0;
+        }
+        &__button {
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 20px;
+            width: 70%;
+        }
+    }
+}

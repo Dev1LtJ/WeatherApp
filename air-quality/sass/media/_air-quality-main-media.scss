@@ -1,0 +1,87 @@
+@media (max-width:  767px) {
+    .air-quality {
+        &__main {
+            padding: 15px 15px;
+        }
+        &__main-data {
+            flex-direction: column;
+        }
+        &__main-leftCol {
+            width: 100%;
+            padding-right: 0;
+        }
+        &__main-rightCol {
+            margin-top: 10px;
+            padding-top: 10px;
+            padding-left: 0;
+            width: 100%;
+            border-left: none;
+            border-top: 1px solid;
+            border-image: linear-gradient(90deg, $white-color, $grey-color, $white-color) 1;
+            display: block;
+        }
+        &__levels {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        &__levels-title {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width:  576px) {
+    .air-quality {
+        &__main {
+            margin-top: 70px;
+        }
+        &__main-title {
+            font-weight: 400;
+            font-size: 23px;
+            line-height: 23px;
+        }
+        &__main-data {
+            margin-top: 10px;
+        }
+        &__main-leftCol {
+            width: 100%;
+        }
+        &__main-leftCol-wrapper {
+            margin-top: 10px;
+            flex-direction: column;
+        }
+        &__main-descr {
+            margin-top: 10px;
+            margin-left: 0;
+        }
+        &__main-text {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 20px;
+        }
+        &__main-phrase {
+            margin-top: 10px;
+            font-size: 16px;
+            line-height: 22px;
+        }
+        &__levels {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        &__good-level,
+        &__fair-level,
+        &__moderate-level,
+        &__poor-level,
+        &__veryPoor-level {
+            width: 100%;
+        }
+        &__levels-title {
+            width: 100%;
+            font-size: 18px;
+        }
+    }
+}

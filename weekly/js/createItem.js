@@ -45,10 +45,15 @@ export function createItem () {
     let windImg = document.createElement('IMG');
     windImg.setAttribute('src', 'icons/currentconditions/wind.svg');
     windImg.setAttribute('alt', 'wind-img');
-    let windArrowImg = document.createElement('IMG');
-    windArrowImg.setAttribute('src', 'icons/currentconditions/wind-arrow.svg');
-    windArrowImg.setAttribute('alt', 'wind-arrow-img');
-    windArrowImg.className = 'weekly-weather__wind-arrow';
+
+    let windArrowImg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    windArrowImg.setAttribute('class', 'weekly-weather__wind-arrow');
+    windArrowImg.setAttribute('viewBox', '0 0 24 24');
+    windArrowImg.setAttribute('width', '24');
+    windArrowImg.setAttribute('height', '24');
+    windArrowImg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+    windArrowImg.innerHTML = '<path stroke="#2B2B2B" fill="none" d="M18.467 4.482l-5.738 5.738a1.005 1.005 0 0 1-1.417 0L5.575 4.482l6.446 16.44 6.446-16.44z"></path>';
+    
     let windDescr = document.createElement('DIV');
     windDescr.className = 'weekly-weather__wind-descr';
     wind.append(windImg);

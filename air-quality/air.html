@@ -96,6 +96,65 @@
                     </div>
                 </div>
             </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="mobile">
+            <div class="mobile__search">
+                <input class="mobile__search-input" type="search" placeholder="Search City">
+                <img src="icons/header/search.svg" alt="search" class="mobile__search-icon">
+            </div>
+            <div class="mobile__nav">
+                <nav>
+                    <li class="mobile__item">
+                        <a class="mobile__today" href="../index.html">Сегодня</a>
+                    </li>
+                    <li class="mobile__item">
+                        <a class="mobile__hourly" href="../hourly/hourly.html">Почасовой прогноз</a>
+                    </li>
+                    <li class="mobile__item">
+                        <a class="mobile__week" href="../weekly/week.html">На 7 дней</a>
+                    </li>
+                    <li class="mobile__item active">
+                        <a class="mobile__air-quality" target="_self" href="#">Индекс качества воздуха</a>
+                    </li>
+                    <li class="mobile__item">
+                        <a class="mobile__maps" href="../maps/maps.html">Карты</a>
+                    </li>
+                </nav>
+            </div>
+            <div class="mobile__menu">
+                <div class="mobile__divider"></div>
+                <div class="mobile__lang">
+                    <div id="mobile_en" class="mobile__lang-item">
+                        <span>English</span>
+                        <img src="icons/menu/eng-flag.svg" alt="lang-en">
+                    </div>
+                    <div id="mobile_ru" class="mobile__lang-item">
+                        <span>Русский</span>
+                        <img src="icons/menu/russia-flag.svg" alt="lang-ru">
+                    </div>
+                </div>
+                <div class="mobile__divider"></div>
+                <div class="mobile__units">
+                    <div id="mobile_metric" class="mobile__units-item">Метрическая</div>
+                    <div id="mobile_imperial" class="mobile__units-item ">Имперская</div>
+                </div>
+                <div class="mobile__divider"></div>
+                <div class="mobile__theme">
+                    <div id="mobile_light" class="mobile__theme-item">
+                        <span>Light</span>
+                        <img src="icons/menu/sun.svg" alt="theme-light">
+                    </div>
+                    <div id="mobile_dark" class="mobile__theme-item">
+                        <span>Dark</span>
+                        <img src="icons/menu/moon.svg" alt="theme-dark">
+                    </div>
+                </div>
+            </div>
         </div>
 </header>
 <div class="nav">
@@ -199,6 +258,54 @@
                         </div>
                     </div>
                 </div>
+                <div class="air-quality__item">
+                    <div class="air-quality__item-logo">
+                        PM<br>2.5
+                    </div>
+                    <div class="air-quality__item-data">
+                        <div class="air-quality__item-title">
+                            Particulate matter less than 2.5 microns
+                        </div>
+                        <div class="air-quality__item-text">
+                            Current conentration
+                        </div>
+                        <div class="air-quality__item-concentration">
+                            229.73 μg/m3
+                        </div>
+                    </div>
+                </div>
+                <div class="air-quality__item">
+                    <div class="air-quality__item-logo">
+                        PM<br>2.5
+                    </div>
+                    <div class="air-quality__item-data">
+                        <div class="air-quality__item-title">
+                            Particulate matter less than 2.5 microns
+                        </div>
+                        <div class="air-quality__item-text">
+                            Current conentration
+                        </div>
+                        <div class="air-quality__item-concentration">
+                            229.73 μg/m3
+                        </div>
+                    </div>
+                </div>
+                <div class="air-quality__item">
+                    <div class="air-quality__item-logo">
+                        PM<br>2.5
+                    </div>
+                    <div class="air-quality__item-data">
+                        <div class="air-quality__item-title">
+                            Particulate matter less than 2.5 microns
+                        </div>
+                        <div class="air-quality__item-text">
+                            Current conentration
+                        </div>
+                        <div class="air-quality__item-concentration">
+                            229.73 μg/m3
+                        </div>
+                    </div>
+                </div>
             </div>
             <a class="air-quality__button" href="../index.html">Прогноз на сегодня</a>
         </div>
@@ -245,5 +352,6 @@
 <script src="js/settings.js" type="module"></script>
 <script src="js/script.js" type="module"></script>
 <script src="js/menu.js" type="module"></script>
+<script src="js/mobile.js" type="module"></script>
 </body>
 </html>

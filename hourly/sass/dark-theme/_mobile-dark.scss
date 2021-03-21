@@ -1,0 +1,37 @@
+.dark {
+    .mobile {
+        color: $white-color;
+        background-color: rgba($darklight-color, 0.95);
+        &__search {
+            &-input {
+                color: $white-color;
+                background-color: rgba($white-color, 0.5);
+                &::placeholder {
+                    color: $white-color;
+                }
+                &:focus {
+                    border: 2px solid $white-color;
+                }
+            }
+        }
+        &__item {
+            a {
+                color: $white-color;
+            }
+        }
+        &__divider {
+            background-color: $darkgrey-color;
+        }
+        &__lang, &__theme, &__units {
+            &-item {
+                &:hover {
+                    background-color: $darkgrey-color;
+                }
+                &.active {
+                    background-color: $darkgrey-color;
+                    color: $white-color;
+                }
+            }
+        }
+    }
+}

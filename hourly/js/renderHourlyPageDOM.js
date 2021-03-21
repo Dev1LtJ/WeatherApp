@@ -23,6 +23,17 @@ let menuLang = document.querySelector('.menu__title_lang'),
 
 let weekBtn = document.querySelector('.hourly-weather__button');
 
+let mobileNavToday = document.querySelector('.mobile__today'),
+    mobileNavHourly = document.querySelector('.mobile__hourly'),
+    mobileNavWeek = document.querySelector('.mobile__week'),
+    mobileNavAirQuality = document.querySelector('.mobile__air-quality'),
+    mobileNavMaps = document.querySelector('.mobile__maps'),
+    mobileHeaderSearch = document.querySelector('.mobile__search-input'),
+    mobileMenuUnitsMetric = document.getElementById('mobile_metric'),
+    mobileMenuUnitsImperial = document.getElementById('mobile_imperial'),
+    mobileMenuThemeLight = document.querySelector('#mobile_light span'),
+    mobileMenuThemeDark = document.querySelector('#mobile_dark span');
+
 export function renderAllDOM () {
     renderLangDOM();
     renderThemeDOM();
@@ -46,6 +57,17 @@ export function renderLangDOM () {
     menuThemeLight.textContent = langObj[settings.lang].menu.themeLight;
     menuThemeDark.textContent = langObj[settings.lang].menu.themeDark;
     weekBtn.textContent = langObj[settings.lang].buttons.daily;
+
+    mobileNavToday.textContent = langObj[settings.lang].nav.today;
+    mobileNavHourly.textContent = langObj[settings.lang].nav.hourly;
+    mobileNavWeek.textContent = langObj[settings.lang].nav.week;
+    mobileNavAirQuality.textContent = langObj[settings.lang].nav.airQuality;
+    mobileNavMaps.textContent = langObj[settings.lang].nav.maps;
+    mobileHeaderSearch.placeholder = langObj[settings.lang].headerSearchPlaceholder;
+    mobileMenuUnitsMetric.textContent = langObj[settings.lang].menu.unitsMetric;
+    mobileMenuUnitsImperial.textContent = langObj[settings.lang].menu.unitsImperial;
+    mobileMenuThemeLight.textContent = langObj[settings.lang].menu.themeLight;
+    mobileMenuThemeDark.textContent = langObj[settings.lang].menu.themeDark;
 }
 
 export function renderThemeDOM () {

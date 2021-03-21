@@ -13,7 +13,7 @@
             border: 1px solid $darkgrey-color;
         }
         &__allTemp-item {
-            border-image: linear-gradient(180deg, $main-dark-color, $grey-color, $main-dark-color) 1;
+            border-image: linear-gradient(180deg, $main-dark-color, $darkgrey-color, $main-dark-color) 1;
         }
         &__allTemp-value {
             color: $main-color;
@@ -31,6 +31,11 @@
             &:hover {
                 color: $white-color;
                 box-shadow: 0 0 5px 0 $main-color;
+            }
+        }
+        &__wind-arrow {
+            path {
+                stroke: $white-color;
             }
         }
     }

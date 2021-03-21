@@ -5,6 +5,11 @@
         box-shadow: 0 0 10px 0 rgba($main-dark-color, 0.2);
         &__details-item {
             border-top: 1px solid $darkgrey-color;
+            svg {
+                path {
+                    stroke: $white-color;
+                }
+            }
         }
     }
 }

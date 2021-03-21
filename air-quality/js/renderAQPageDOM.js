@@ -31,6 +31,17 @@ let todayButton = document.querySelector('.air-quality__button'),
     veryPoorLevel = document.querySelector('.air-quality__veryPoor-title'),
     allPollutants = document.querySelector('.air-quality__info .card-header__primary');
 
+let mobileNavToday = document.querySelector('.mobile__today'),
+    mobileNavHourly = document.querySelector('.mobile__hourly'),
+    mobileNavWeek = document.querySelector('.mobile__week'),
+    mobileNavAirQuality = document.querySelector('.mobile__air-quality'),
+    mobileNavMaps = document.querySelector('.mobile__maps'),
+    mobileHeaderSearch = document.querySelector('.mobile__search-input'),
+    mobileMenuUnitsMetric = document.getElementById('mobile_metric'),
+    mobileMenuUnitsImperial = document.getElementById('mobile_imperial'),
+    mobileMenuThemeLight = document.querySelector('#mobile_light span'),
+    mobileMenuThemeDark = document.querySelector('#mobile_dark span');
+
 export function renderAllDOM () {
     renderLangDOM();
     renderThemeDOM();
@@ -63,6 +74,17 @@ export function renderLangDOM () {
     moderateLevel.textContent = `3 - ${langObj[settings.lang].aqi.moderate}`;
     poorLevel.textContent = `4 - ${langObj[settings.lang].aqi.poor}`;
     veryPoorLevel.textContent = `5 - ${langObj[settings.lang].aqi.veryPoor}`;
+
+    mobileNavToday.textContent = langObj[settings.lang].nav.today;
+    mobileNavHourly.textContent = langObj[settings.lang].nav.hourly;
+    mobileNavWeek.textContent = langObj[settings.lang].nav.week;
+    mobileNavAirQuality.textContent = langObj[settings.lang].nav.airQuality;
+    mobileNavMaps.textContent = langObj[settings.lang].nav.maps;
+    mobileHeaderSearch.placeholder = langObj[settings.lang].headerSearchPlaceholder;
+    mobileMenuUnitsMetric.textContent = langObj[settings.lang].menu.unitsMetric;
+    mobileMenuUnitsImperial.textContent = langObj[settings.lang].menu.unitsImperial;
+    mobileMenuThemeLight.textContent = langObj[settings.lang].menu.themeLight;
+    mobileMenuThemeDark.textContent = langObj[settings.lang].menu.themeDark;
 }
 
 export function renderThemeDOM () {
