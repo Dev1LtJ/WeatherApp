@@ -25,8 +25,7 @@ let windSpeed = document.querySelector('.current-conditions__wind-value'),
     minMax = document.querySelector('.current-conditions__temp-value'),
     sunrise = document.querySelector('.current-conditions__sunrise-text'),
     sunset = document.querySelector('.current-conditions__sunset-text'),
-    graphSun = document.querySelector('.current-conditions__graph-secondary'),
-    graphRad = document.querySelector('.current-conditions__graph-primary').getBoundingClientRect().width/2;
+    graphSun = document.querySelector('.current-conditions__graph-secondary');
 //today, hourly & daily weather
 let hourlyItems = document.querySelectorAll('.hourly-weather__details-item'),
     dailyItems = document.querySelectorAll('.daily-weather__details-item'),
@@ -69,7 +68,7 @@ function setCurrentConditions (responseData) {
     minMax.textContent = `${Math.round(responseData.daily[0].temp.max)}°/${Math.round(responseData.daily[0].temp.min)}°`;
     sunrise.textContent = `${new Intl.DateTimeFormat(settings.lang, {hour: '2-digit', minute: '2-digit'}).format(new Date(responseData.daily[0].sunrise*1000))}`;
     sunset.textContent = `${new Intl.DateTimeFormat(settings.lang, {hour: '2-digit', minute: '2-digit'}).format(new Date(responseData.daily[0].sunset*1000))}`;
-    //moveSun (responseData);
+    moveSun (responseData);
 }
 
 function setHourlyWeather (responseData) {
@@ -96,10 +95,24 @@ function setDailyWeather (responseData) {
     });
     i = 1;
 }
-// 6 - 12 - утро, 12 - 18 - день, 18 - 00 - вечер, 00 - 06 ночь.
-// !!!!дописать логику
+
 function setTodayWeather (responseData) {
-    //let currentTime = new Date();
+    let firstHourData = (new Date (responseData.hourly[0].dt*1000)).getHours();
+    let dayTimeIndex = getDayTime(firstHourData);
+    let i = 0;
+    todayItems.forEach((item, index)=> {
+        if (index === dayTimeIndex) {
+            item.children[0].style = 'font-weight: 400';
+        }
+        if (index < dayTimeIndex) {
+            item.children[2].setAttribute('src', `icons/na.svg`);
+            item.children[3].lastElementChild.textContent = '--';
+        } else {
+            item.children[2].setAttribute('src', `icons/openweathermap/${responseData.hourly[i].weather[0].icon}.svg`);
+            item.children[3].lastElementChild.textContent = `${Math.round(responseData.hourly[i].pop*100)} %`;
+            i = i + 6;
+        }
+    });
     todayItems.forEach((item, index) => {
         switch (index) {
             case 0:
@@ -124,7 +137,18 @@ function setTodayWeather (responseData) {
     });
 }
 
-//Взято с gitHUB
+function getDayTime (time) {
+    if (time >= 0 && time <= 6) {
+        return 3;
+    } else if (time > 6 && time <= 12) {
+        return 0;
+    } else if (time > 12 && time <= 18) {
+        return 1;
+    } else {
+        return 2;
+    }
+}
+
 function moonphase(requestDate) {
 
     let d = requestDate,
@@ -185,9 +209,8 @@ function moonphase(requestDate) {
     }
 };
 
-//Доработать
 function moveSun (responseData) {
-    let x = responseData.daily[0].sunrise*1000;
+    let x = responseData.daily[0].sunrise*1000; //initial time
     let y = responseData.daily[0].sunset*1000;
     let currentTime = new Date();
     if (currentTime > y) {
@@ -196,13 +219,11 @@ function moveSun (responseData) {
     } else {
         graphSun.hidden = false;
         let dayLight = y - x;
-        let percentsOfDayLight = (currentTime - x)/dayLight;
-        let alfa = 180*percentsOfDayLight;
-        graphSun.style.left = `${graphRad-(Math.cos(toRadians(alfa)*graphRad))}px`;
-        graphSun.style.bottom = `${Math.sin(toRadians(alfa))*graphRad}px`;
+        let percentsOfDayLight = ((currentTime - x)/dayLight).toFixed(2);
+        let halfcircumference = Math.PI*40;
+        let L = halfcircumference*percentsOfDayLight;
+        let alfa = L/40;
+        graphSun.style.left = 40-40*Math.cos(alfa);
+        graphSun.style.bottom = 40*Math.sin(alfa);
     }
-}
-
-function toRadians (angle) {
-    return (angle * Math.PI) / 180;
 }

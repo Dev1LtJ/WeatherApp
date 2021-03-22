@@ -11,5 +11,10 @@
                 }
             }
         }
+        &__graph-secondary {
+            circle {
+                fill: $main-dark-color;
+            }
+        }
     }
 }
