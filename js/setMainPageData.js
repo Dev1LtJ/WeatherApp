@@ -138,11 +138,11 @@ function setTodayWeather (responseData) {
 }
 
 function getDayTime (time) {
-    if (time >= 0 && time <= 6) {
+    if (time >= 0 && time < 6) {
         return 3;
-    } else if (time > 6 && time <= 12) {
+    } else if (time >= 6 && time < 12) {
         return 0;
-    } else if (time > 12 && time <= 18) {
+    } else if (time >= 12 && time < 18) {
         return 1;
     } else {
         return 2;
