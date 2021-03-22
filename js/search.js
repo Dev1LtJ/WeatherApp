@@ -2,10 +2,10 @@ let search = document.querySelector('.header__search-input');
 
 search.addEventListener('keydown', async (event)=> {
     if (event.key === 'Enter') {
-        if(!search.value) return false;
+        if(!search.value) return false; //Подсветить плейсхолдер
         let isResult = await checkInput (search.value);
-        console.log(isResult);
-        if (isResult) console.log('kek');
+        if (isResult.length === 0) return false; //Подсветить плейсхолдер
+        //Если все ОК - Поиск
     }
     
 })
