@@ -126,24 +126,6 @@
     &__sunrise-text, &__sunset-text {
         margin-left: 5px;
     }
-    &__sun-graph {
-        margin: 0 auto;
-        width: 100px;
-        position: relative;
-    }
-    &__sun-graph-primary {
-        overflow: hidden;
-        width: 100px;
-        height: 65px;
-    }
-    &__sun-graph-secondary {
-        bottom: 0px;
-        left: 0px;
-        overflow: hidden;
-        position: absolute;
-        height: 24px;
-        width: 24px;
-    }
     &__details {
         width: 49%;
         border-bottom: 1px solid $grey-color;

@@ -216,10 +216,9 @@ function moveSun (responseData) {
     let y = responseData.daily[0].sunset*1000;
     let currentTime = new Date();
     if (currentTime > y) {
-        graphSun.hidden = true;
-        return false;
+        graphSun.style.display = 'none';
     } else {
-        graphSun.hidden = false;
+        graphSun.style.display = 'block';
         let dayLight = y - x;
         let percentsOfDayLight = ((currentTime - x)/dayLight).toFixed(2);
         let halfcircumference = Math.PI*40;

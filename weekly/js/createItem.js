@@ -82,19 +82,6 @@ export function createItem () {
     let sun = document.createElement('DIV');
     sun.className = 'weekly-weather__sun';
 
-    let sunGraph = document.createElement('DIV');
-    sunGraph.className = 'weekly-weather__sun-graph';
-    let sunGraphPrimary = document.createElement('IMG');
-    sunGraphPrimary.className = 'weekly-weather__sun-graph-primary';
-    sunGraphPrimary.setAttribute('src', 'icons/currentconditions/arc.svg');
-    sunGraphPrimary.setAttribute('alt', 'arc-img');
-    let sunGraphSecondary = document.createElement('IMG');
-    sunGraphSecondary.className = 'weekly-weather__sun-graph-secondary';
-    sunGraphSecondary.setAttribute('src', 'icons/currentconditions/sun.svg');
-    sunGraphSecondary.setAttribute('alt', 'sun-img');
-    sunGraph.append(sunGraphPrimary);
-    sunGraph.append(sunGraphSecondary);
-
     let sunData = document.createElement('DIV');
     sunData.className = 'weekly-weather__sun-data';
     let sunrise = document.createElement('DIV');
@@ -118,7 +105,6 @@ export function createItem () {
     sunData.append(sunrise);
     sunData.append(sunset);
 
-    sun.append(sunGraph);
     sun.append(sunData);
 
     let allTemp = document.createElement('DIV');
