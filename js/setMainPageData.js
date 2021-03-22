@@ -105,6 +105,8 @@ function setTodayWeather (responseData) {
             item.children[0].style = 'font-weight: 400';
         }
         if (index < dayTimeIndex) {
+            item.children[0].style.color = '#dedede';
+            item.children[1].style.color = '#dedede';
             item.children[2].setAttribute('src', `icons/na.svg`);
             item.children[3].lastElementChild.textContent = '--';
         } else {
