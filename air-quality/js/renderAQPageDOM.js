@@ -8,8 +8,7 @@ let headerTitle = document.querySelector('.header__descr'),
 let navToday = document.querySelector('.nav__today'),
     navHourly = document.querySelector('.nav__hourly'),
     navWeek = document.querySelector('.nav__week'),
-    navAirQuality = document.querySelector('.nav__air-quality'),
-    navMaps = document.querySelector('.nav__maps');
+    navAirQuality = document.querySelector('.nav__air-quality');
 
 let footerContact = document.querySelector('.footer__contacts-title');
 
@@ -35,7 +34,6 @@ let mobileNavToday = document.querySelector('.mobile__today'),
     mobileNavHourly = document.querySelector('.mobile__hourly'),
     mobileNavWeek = document.querySelector('.mobile__week'),
     mobileNavAirQuality = document.querySelector('.mobile__air-quality'),
-    mobileNavMaps = document.querySelector('.mobile__maps'),
     mobileHeaderSearch = document.querySelector('.mobile__search-input'),
     mobileMenuUnitsMetric = document.getElementById('mobile_metric'),
     mobileMenuUnitsImperial = document.getElementById('mobile_imperial'),
@@ -55,7 +53,6 @@ export function renderLangDOM () {
     navHourly.textContent = langObj[settings.lang].nav.hourly;
     navWeek.textContent = langObj[settings.lang].nav.week;
     navAirQuality.textContent = langObj[settings.lang].nav.airQuality;
-    navMaps.textContent = langObj[settings.lang].nav.maps;
     footerContact.textContent = langObj[settings.lang].contact;
     menuLang.textContent = langObj[settings.lang].menu.lang;
     menuUnitsTitle.textContent = langObj[settings.lang].menu.units;
@@ -79,7 +76,6 @@ export function renderLangDOM () {
     mobileNavHourly.textContent = langObj[settings.lang].nav.hourly;
     mobileNavWeek.textContent = langObj[settings.lang].nav.week;
     mobileNavAirQuality.textContent = langObj[settings.lang].nav.airQuality;
-    mobileNavMaps.textContent = langObj[settings.lang].nav.maps;
     mobileHeaderSearch.placeholder = langObj[settings.lang].headerSearchPlaceholder;
     mobileMenuUnitsMetric.textContent = langObj[settings.lang].menu.unitsMetric;
     mobileMenuUnitsImperial.textContent = langObj[settings.lang].menu.unitsImperial;
