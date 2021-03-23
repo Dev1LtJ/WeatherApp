@@ -1,5 +1,6 @@
 import {setToLocalStorage,
-    getFromLocalStorage} from '../js/localStorage.js';
+    getFromLocalStorage} from './localStorage.js';
+import {getGeolocation} from './getGeolocation.js';
 let settings = {};
 
 if (getFromLocalStorage('settings')) {
@@ -8,9 +9,10 @@ if (getFromLocalStorage('settings')) {
     settings = {
         lang: 'ru',
         theme: 'light',
-        units: 'metric'
+        units: 'metric',
     };
     setToLocalStorage(settings, 'settings');
+    getGeolocation();
 }
 
 export {settings};

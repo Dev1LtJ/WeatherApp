@@ -25,6 +25,36 @@
     &__search {
         display: block;
         position: relative;
+        &-results {
+            display: none;
+            position: absolute;
+            top: 35px;
+            z-index: 1000;
+            width: 95%;
+            left: 50%;
+            transform: translateX(-50%);
+            overflow: auto;
+            color: $black-color;
+            scroll-behavior: smooth;
+            background-color: $white-color;
+            border-radius: 6px;
+            box-shadow: 0 0 10px 0 rgba($white-color, 0.2);
+        }
+        &-result {
+            text-align: left;
+            padding: 8px 15px;
+            line-height: 18px;
+            font-size: 18px;
+            border-top: 1px solid $grey-color;
+            cursor: pointer;
+            &:first-of-type {
+                border: none;
+            }
+            &:hover {
+                background-color: $blue-color;
+                color: $white-color;
+            }
+        }
         &-input {
             font-weight: 300;
             color: $white-color;

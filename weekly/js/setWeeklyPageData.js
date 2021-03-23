@@ -11,7 +11,7 @@ let titleCity = document.querySelector('.card-header__primary'),
 
 export async function setWeeklyPageData() {
     setCity(titleCity);
-    let requestURL = `https://api.openweathermap.org/data/2.5/onecall?lat=53.90249633789063&lon=27.56148147583008&appid=400da6eb26c3c55fb657e09c050e94bd&units=${settings.units}&lang=${settings.lang}&exclude=minutely,alerts,hourly`;
+    let requestURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${settings.lat}&lon=${settings.lon}&appid=400da6eb26c3c55fb657e09c050e94bd&units=${settings.units}&lang=${settings.lang}&exclude=minutely,alerts,hourly`;
     let response = await fetch(requestURL);
     if (response.ok) {
         let responseData = await response.json();

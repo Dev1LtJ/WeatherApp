@@ -28,6 +28,9 @@ export const langObj = {
             thirdquarter: 'Последняя четверть',
             waningcrescent: 'Старая луна',
         },
+        errorMessages: {
+            noResults: 'Результаты не найдены',
+        },
         todays: {
             title: "Прогноз на сегодня",
             morning: 'Утро',
@@ -46,7 +49,6 @@ export const langObj = {
             hourly: 'Почасовой прогноз',
             week: 'На 7 дней',
             airQuality: 'Индекс качества воздуха',
-            maps: 'Карты'
         },
         menu: {
             lang: 'Язык',
@@ -122,6 +124,9 @@ export const langObj = {
             thirdquarter: 'Third Quarter',
             waningcrescent: 'Waning Crescent',
         },
+        errorMessages: {
+            noResults: 'No results found',
+        },
         todays: {
             title: "Today's Forecast",
             morning: 'Morning',
@@ -140,7 +145,6 @@ export const langObj = {
             hourly: 'Hourly Forecast',
             week: 'For 7 days',
             airQuality: 'Air Quality Index',
-            maps: 'Maps'
         },
         menu: {
             lang: 'Language',

@@ -1,11 +1,9 @@
-import {getGeolocation} from './getGeolocation.js';
 import {langObj} from './langObj.js';
 import {unitsObj} from './unitsObj.js';
 import {settings} from './settings.js';
 import {setCity} from './setCity.js';
 import {setAirQualityData} from './air-quality.js';
 
-//console.log(getGeolocation());
 //current weather
 let city = document.querySelector('.card-header__primary'),
     time = document.querySelector('.card-header__secondary'),
@@ -34,7 +32,7 @@ let hourlyItems = document.querySelectorAll('.hourly-weather__details-item'),
 export async function setMainPageData () {
     setCity(city);
     setAirQualityData();
-    let requestURL = `https://api.openweathermap.org/data/2.5/onecall?lat=53.90249633789063&lon=27.56148147583008&appid=400da6eb26c3c55fb657e09c050e94bd&units=${settings.units}&lang=${settings.lang}&exclude=minutely,alerts`;
+    let requestURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${settings.lat}&lon=${settings.lon}&appid=400da6eb26c3c55fb657e09c050e94bd&units=${settings.units}&lang=${settings.lang}&exclude=minutely,alerts`;
     let response = await fetch(requestURL);
     if (response.ok) {
         let responseData = await response.json();

@@ -1,7 +1,7 @@
 import {settings} from './settings.js';
 
 export async function setCity (city) {
-    let requestURL = `https://api.openweathermap.org/data/2.5/weather?q=Minsk&appid=400da6eb26c3c55fb657e09c050e94bd&lang=${settings.lang}`;
+    let requestURL = `https://api.openweathermap.org/data/2.5/weather?lat=${settings.lat}&lon=${settings.lon}&appid=400da6eb26c3c55fb657e09c050e94bd&lang=${settings.lang}`;
     let response = await fetch(requestURL);
     if (response.ok) {
         let responseData = await response.json();

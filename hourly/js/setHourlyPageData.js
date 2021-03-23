@@ -1,4 +1,3 @@
-//import {getGeolocation} from './getGeolocation.js';
 import {langObj} from '../../js/langObj.js';
 import {unitsObj} from '../../js/unitsObj.js';
 import {settings} from './settings.js';
@@ -11,7 +10,7 @@ let titleCity = document.querySelector('.card-header__primary'),
 
 export async function setHourlyPageData() {
     setCity(titleCity);
-    let requestURL = `https://api.openweathermap.org/data/2.5/onecall?lat=53.90249633789063&lon=27.56148147583008&appid=400da6eb26c3c55fb657e09c050e94bd&units=${settings.units}&lang=${settings.lang}&exclude=minutely,alerts,daily`;
+    let requestURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${settings.lat}&lon=${settings.lon}&appid=400da6eb26c3c55fb657e09c050e94bd&units=${settings.units}&lang=${settings.lang}&exclude=minutely,alerts,daily`;
     let response = await fetch(requestURL);
     if (response.ok) {
         let responseData = await response.json();
