@@ -1,6 +1,7 @@
 import {setToLocalStorage,
     getFromLocalStorage} from './localStorage.js';
 import {getGeolocation} from './getGeolocation.js';
+
 let settings = {};
 
 if (getFromLocalStorage('settings')) {
