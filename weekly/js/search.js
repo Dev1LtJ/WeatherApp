@@ -77,7 +77,7 @@ async function setData (search, searchContainer, version) {
 }
 //+
 async function checkInput (inputedCity) {
-    let requestURL = `http://api.openweathermap.org/geo/1.0/direct?q=${inputedCity}&limit=10&appid=400da6eb26c3c55fb657e09c050e94bd`;
+    let requestURL = `https://api.openweathermap.org/geo/1.0/direct?q=${inputedCity}&limit=10&appid=400da6eb26c3c55fb657e09c050e94bd`;
     let response = await fetch(requestURL);
     if (response.ok) {
         let responseData = await response.json();
