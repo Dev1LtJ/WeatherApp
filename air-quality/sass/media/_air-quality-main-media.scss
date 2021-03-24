@@ -2,6 +2,7 @@
     .air-quality {
         &__main {
             padding: 15px 15px;
+            margin-top: 70px;
         }
         &__main-data {
             flex-direction: column;
@@ -34,9 +35,6 @@
 
 @media (max-width:  576px) {
     .air-quality {
-        &__main {
-            margin-top: 70px;
-        }
         &__main-title {
             font-weight: 400;
             font-size: 23px;

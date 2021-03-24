@@ -9,7 +9,7 @@ let langMenu = document.querySelector('.menu__lang'),
     themeMenu = document.querySelector('.menu__theme');
 
 //initial settings
-import {settings} from './settings.js';
+import {settings} from '../../js/settings.js';
 import {setToLocalStorage} from '../../js/localStorage.js';
 import {renderLangDOM, renderThemeDOM} from './renderWeeklyPageDOM.js'
 import {setWeeklyPageData} from './setWeeklyPageData.js'

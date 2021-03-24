@@ -1,8 +1,7 @@
-//import {getGeolocation} from './getGeolocation.js';
 import {langObj} from '../../js/langObj.js';
 import {unitsObj} from '../../js/unitsObj.js';
-import {settings} from './settings.js';
-import {setCity} from './setCity.js';
+import {settings} from '../../js/settings.js';
+import {setCity} from '../../js/setCity.js';
 import {createItem} from './createItem.js';
 
 let titleCity = document.querySelector('.card-header__primary'),

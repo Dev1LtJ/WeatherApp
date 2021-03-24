@@ -15,8 +15,8 @@
             justify-content: flex-start;
         }
         &__temp-img {
-            width: 100px;
-            height: 100px;
+            width: 140px;
+            height: 140px;
         }
         &__feels {
             font-size: 16px;
@@ -38,6 +38,10 @@
         &__temp-phrase {
             font-size: 20px;
             line-height: 20px;
+        }
+        &__temp-img {
+            width: 100px;
+            height: 100px;
         }
     }
 }

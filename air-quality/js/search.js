@@ -1,7 +1,7 @@
-import {langObj} from './langObj.js';
-import {settings} from './settings.js';
-import {setMainPageData} from '../js/setMainPageData.js';
-import {setToLocalStorage} from './localStorage.js';
+import {langObj} from '../../js/langObj.js';
+import {settings} from '../../js/settings.js';
+import {setAQPageData} from './setAQPageData.js'
+import {setToLocalStorage} from '../../js/localStorage.js';
 
 let search = document.querySelector('.header__search-input'),
     searchResults = document.querySelector('.header__search-results');
@@ -27,7 +27,7 @@ searchResults.addEventListener('click', (event)=> {
     settings.lat = event.target.dataset.lat;
     settings.lon = event.target.dataset.lon;
     setToLocalStorage(settings, 'settings');
-    setMainPageData();
+    setAQPageData();
     clearPreviousData(searchResults);
     search.value = '';
 });
@@ -37,7 +37,7 @@ mobileSearchResults.addEventListener('click', (event)=> {
     settings.lat = event.target.dataset.lat;
     settings.lon = event.target.dataset.lon;
     setToLocalStorage(settings, 'settings');
-    setMainPageData();
+    setAQPageData();
     clearPreviousData(mobileSearchResults);
     mobileSearch.value = '';
 });

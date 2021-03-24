@@ -1,5 +1,5 @@
 import {langObj} from '../../js/langObj.js';
-import {settings} from './settings.js';
+import {settings} from '../../js/settings.js';
 import {setAQPageData} from './setAQPageData.js';
 
 let headerTitle = document.querySelector('.header__descr'),

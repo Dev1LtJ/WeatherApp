@@ -1,5 +1,4 @@
-//initial settings
-import {settings} from './settings.js';
+import {settings} from '../../js/settings.js';
 import {setToLocalStorage} from '../../js/localStorage.js';
 import {renderLangDOM, renderThemeDOM} from './renderHourlyPageDOM.js'
 import {setHourlyPageData} from './setHourlyPageData.js'

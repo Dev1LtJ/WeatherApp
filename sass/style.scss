@@ -13,11 +13,6 @@
     margin: 0 auto;
 }
 
-@media(max-width:  991px) {
-    .container {
-        max-width: 960px; 
-    }
-}
 
 @import 'blocks/buttons';
 @import 'blocks/header';

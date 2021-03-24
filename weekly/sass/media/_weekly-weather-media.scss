@@ -32,6 +32,7 @@
 
 @media (max-width:  767px) {
     .weekly-weather {
+        margin-top: 70px;
         &__secondary {
             flex-wrap: wrap;
         }
@@ -73,7 +74,6 @@
 @media (max-width:  575px) {
     .weekly-weather {
         padding: 10px;
-        margin-top: 70px;
         &__column {
             &_wrap {
                 width: 100%;

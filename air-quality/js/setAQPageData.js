@@ -1,7 +1,6 @@
-//import {getGeolocation} from './getGeolocation.js';
 import {langObj} from '../../js/langObj.js';
-import {settings} from './settings.js';
-import {setCity} from './setCity.js';
+import {settings} from '../../js/settings.js';
+import {setCity} from '../../js/setCity.js';
 import {createItem} from './createItem.js';
 
 let titleCity = document.querySelector('.air-quality__main .card-header__primary'),
@@ -96,7 +95,7 @@ function setData (value, title, phrase, ring) {
             phrase.textContent = `${langObj[settings.lang].aqi.poorPhrase}`;
             ring.style.stroke="#FF0000";
             break;
-        case 4:
+        case 5:
             title.textContent = `${langObj[settings.lang].aqi.veryPoor}`;
             phrase.textContent = `${langObj[settings.lang].aqi.veryPoorPhrase}`;
             ring.style.stroke="#9D3D8C";

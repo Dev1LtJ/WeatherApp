@@ -1,5 +1,5 @@
 import {langObj} from '../../js/langObj.js';
-import {settings} from './settings.js';
+import {settings} from '../../js/settings.js';
 
 export function createItem () {
     let item = document.createElement('DIV');

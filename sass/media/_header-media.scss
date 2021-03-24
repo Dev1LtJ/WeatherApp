@@ -6,28 +6,17 @@
     }
 }
 
-@media (max-width:  767px) {
-    .header {
-        &__wrapper {
-            grid-template-columns: 60px 180px minmax(auto, 380px) auto;
-        }
-        &__descr {
-            font-size: 18px;
-            line-height: 18px;
-        }
-        &__selector {
-            width: 125px;
-        }
-    }
-}
-
-@media (max-width: 575px) {
+@media (max-width: 767px) {
     .header {
         position: fixed;
         z-index: 1000;
         height: 70px;
         &__wrapper {
-            grid-template-columns: 50px 180px auto;
+            grid-template-columns: 50px 200px auto;
+        }
+        &__descr {
+            font-size: 18px;
+            line-height: 18px;
         }
         &__logo {
             img {
