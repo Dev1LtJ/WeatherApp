@@ -8,7 +8,7 @@ export function getGeolocation () {
 function getGeolocationSuccess (position) {
     let currentLat = position.coords.latitude;
     let currentLon = position.coords.longitude;
-    if (!settings.lat || settings.lat != currentLat || settings.lon != currentLon) {
+    if (settings.lat != currentLat || settings.lon != currentLon) {
         settings.lat = currentLat;
         settings.lon = currentLon;
     }
