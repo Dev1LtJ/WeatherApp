@@ -13,7 +13,12 @@ if (getFromLocalStorage('settings')) {
         units: 'metric',
     };
     setToLocalStorage(settings, 'settings');
-    getGeolocation();
+    const geoLocation = getGeolocation();
+    if (!geoLocation) {
+        settings.lat = 53.89;
+        settings.lon = 27.56;
+    }
+    setToLocalStorage(settings, 'settings');
 }
 
 export {settings};
